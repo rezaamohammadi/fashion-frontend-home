@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import ProductCard from '../../components/cards/ProductCard';
 
 export function loader(data) {
     return 0
@@ -95,180 +96,32 @@ export default function SearchResault() {
                         <h3>ده نتیجه برای سرچ شما</h3>
                     </div>
                     <div class="pro-row">
-                        <Link to={"/single-product"}>
-                            <img src={process.env.PUBLIC_URL + "/assets/img/women123.png"} />
-                            <p>لباس دخترانه</p>
-                            <div class="pro-rate">
-                                <h6>اسپرت بچگانه</h6>
-                                <span>4.1</span>
-                                <i class="fa-solid fa-star"></i>
-                            </div>
-                            <div class="pro-price">
-                                <p>۱,۲۵۰,۰۰۰</p>
-                                <span>تومان</span>
-                            </div>
-                            <button>افزودن به سبد خرید</button>
-                        </Link>
-                        <Link to={"/single-product"}>
-                            <img src={process.env.PUBLIC_URL + "/assets/img/women123.png"} />
-                            <p>لباس دخترانه</p>
-                            <div class="pro-rate">
-                                <h6>اسپرت بچگانه</h6>
-                                <span>4.1</span>
-                                <i class="fa-solid fa-star"></i>
-                            </div>
-                            <div class="pro-price">
-                                <p>۱,۲۵۰,۰۰۰</p>
-                                <span>تومان</span>
-                            </div>
-                            <button>افزودن به سبد خرید</button>
-                        </Link>
-                        <Link to={"/single-product"}>
-                        <img src={process.env.PUBLIC_URL + "/assets/img/women123.png"} />
-                            <p>لباس دخترانه</p>
-                            <div class="pro-rate">
-                                <h6>اسپرت بچگانه</h6>
-                                <span>4.1</span>
-                                <i class="fa-solid fa-star"></i>
-                            </div>
-                            <div class="pro-price">
-                                <p>۱,۲۵۰,۰۰۰</p>
-                                <span>تومان</span>
-                            </div>
-                            <button>افزودن به سبد خرید</button>
-                        </Link>
+                    <ProductCard image={process.env.PUBLIC_URL+"/assets/img/women123.png"}/>
+                    <ProductCard image={process.env.PUBLIC_URL+"/assets/img/women123.png"}/>
+                    <ProductCard image={process.env.PUBLIC_URL+"/assets/img/women123.png"}/>
+                    
+                      
+                       
                     </div>
                     <div class="pro-row">
-                        <Link to={"/single-product"}>
-                        <img src={process.env.PUBLIC_URL + "/assets/img/women123.png"} />
-                            <p>لباس دخترانه</p>
-                            <div class="pro-rate">
-                                <h6>اسپرت بچگانه</h6>
-                                <span>4.1</span>
-                                <i class="fa-solid fa-star"></i>
-                            </div>
-                            <div class="pro-price">
-                                <p>۱,۲۵۰,۰۰۰</p>
-                                <span>تومان</span>
-                            </div>
-                            <button>افزودن به سبد خرید</button>
-                        </Link>
-                        <Link to={"/single-product"}>
-                        <img src={process.env.PUBLIC_URL + "/assets/img/women-pants.png"} />
-                            <p>لباس دخترانه</p>
-                            <div class="pro-rate">
-                                <h6>اسپرت بچگانه</h6>
-                                <span>4.1</span>
-                                <i class="fa-solid fa-star"></i>
-                            </div>
-                            <div class="pro-price">
-                                <p>۱,۲۵۰,۰۰۰</p>
-                                <span>تومان</span>
-                            </div>
-                            <button>افزودن به سبد خرید</button>
-                        </Link>
-                        <Link to={"/single-product"}>
-                        <img src={process.env.PUBLIC_URL + "/assets/img/women-short.png"} />
-                            <p>لباس دخترانه</p>
-                            <div class="pro-rate">
-                                <h6>اسپرت بچگانه</h6>
-                                <span>4.1</span>
-                                <i class="fa-solid fa-star"></i>
-                            </div>
-                            <div class="pro-price">
-                                <p>۱,۲۵۰,۰۰۰</p>
-                                <span>تومان</span>
-                            </div>
-                            <button>افزودن به سبد خرید</button>
-                        </Link>
+                    <ProductCard image={process.env.PUBLIC_URL+"/assets/img/women123.png"}/>
+                    <ProductCard image={process.env.PUBLIC_URL+"/assets/img/women-pants.png"}/>
+                    <ProductCard image={process.env.PUBLIC_URL+"/assets/img/women-short.png"}/>
+                      
+                     
+                      
                     </div>
                     <div class="pro-row">
-                        <Link to={"/single-product"}>
-                        <img src={process.env.PUBLIC_URL + "/assets/img/women-hoodiback.png"} />
-                            <p>لباس دخترانه</p>
-                            <div class="pro-rate">
-                                <h6>اسپرت بچگانه</h6>
-                                <span>4.1</span>
-                                <i class="fa-solid fa-star"></i>
-                            </div>
-                            <div class="pro-price">
-                                <p>۱,۲۵۰,۰۰۰</p>
-                                <span>تومان</span>
-                            </div>
-                            <button>افزودن به سبد خرید</button>
-                        </Link>
-                        <Link to={"/single-product"}>
-                        <img src={process.env.PUBLIC_URL + "/assets/img/women123.png"} />
-                            <p>لباس دخترانه</p>
-                            <div class="pro-rate">
-                                <h6>اسپرت بچگانه</h6>
-                                <span>4.1</span>
-                                <i class="fa-solid fa-star"></i>
-                            </div>
-                            <div class="pro-price">
-                                <p>۱,۲۵۰,۰۰۰</p>
-                                <span>تومان</span>
-                            </div>
-                            <button>افزودن به سبد خرید</button>
-                        </Link>
-                        <Link to={"/single-product"}>
-                        <img src={process.env.PUBLIC_URL + "/assets/img/women123.png"} />
-                            <p>لباس دخترانه</p>
-                            <div class="pro-rate">
-                                <h6>اسپرت بچگانه</h6>
-                                <span>4.1</span>
-                                <i class="fa-solid fa-star"></i>
-                            </div>
-                            <div class="pro-price">
-                                <p>۱,۲۵۰,۰۰۰</p>
-                                <span>تومان</span>
-                            </div>
-                            <button>افزودن به سبد خرید</button>
-                        </Link>
+                    <ProductCard image={process.env.PUBLIC_URL+"/assets/img/women123.png"}/>
+                    <ProductCard image={process.env.PUBLIC_URL+"/assets/img/women123.png"}/>
+                    <ProductCard image={process.env.PUBLIC_URL+"/assets/img/women-hoodiback.png"}/>
+                       
                     </div>
                     <div class="pro-row">
-                        <Link to={"/single-product"}>
-                        <img src={process.env.PUBLIC_URL + "/assets/img/nike-girl.png"} />
-                            <p>لباس دخترانه</p>
-                            <div class="pro-rate">
-                                <h6>اسپرت بچگانه</h6>
-                                <span>4.1</span>
-                                <i class="fa-solid fa-star"></i>
-                            </div>
-                            <div class="pro-price">
-                                <p>۱,۲۵۰,۰۰۰</p>
-                                <span>تومان</span>
-                            </div>
-                            <button>افزودن به سبد خرید</button>
-                        </Link>
-                        <Link to={"/single-product"}>
-                        <img src={process.env.PUBLIC_URL + "/assets/img/women1.jpg"} />
-                            <p>لباس دخترانه</p>
-                            <div class="pro-rate">
-                                <h6>اسپرت بچگانه</h6>
-                                <span>4.1</span>
-                                <i class="fa-solid fa-star"></i>
-                            </div>
-                            <div class="pro-price">
-                                <p>۱,۲۵۰,۰۰۰</p>
-                                <span>تومان</span>
-                            </div>
-                            <button>افزودن به سبد خرید</button>
-                        </Link>
-                        <Link to={"/single-product"}>
-                        <img src={process.env.PUBLIC_URL + "/assets/img/tshirt-girl.png"} />
-                            <p>لباس دخترانه</p>
-                            <div class="pro-rate">
-                                <h6>اسپرت بچگانه</h6>
-                                <span>4.1</span>
-                                <i class="fa-solid fa-star"></i>
-                            </div>
-                            <div class="pro-price">
-                                <p>۱,۲۵۰,۰۰۰</p>
-                                <span>تومان</span>
-                            </div>
-                            <button>افزودن به سبد خرید</button>
-                        </Link>
+                    <ProductCard image={process.env.PUBLIC_URL+"/assets/img/nike-girl.png"}/>
+                    <ProductCard image={process.env.PUBLIC_URL+"/assets/img/women1.jpg"}/>
+                    <ProductCard image={process.env.PUBLIC_URL+"/assets/img/tshirt-girl.png"}/>
+                        
                     </div>
                     <button class="more-btn">نمایش نتایج بیشتر...</button>
                 </div>

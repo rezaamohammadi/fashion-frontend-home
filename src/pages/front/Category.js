@@ -3,7 +3,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import { Navigation, navigation } from "swiper/modules";
 import { Link } from "react-router-dom";
-import CathCart from "../../components/carts/CategoryCard.js";
+import CathCart from "../../components/cards/CategoryCard.js";
 export function loader(data) {
   return 0;
 }
