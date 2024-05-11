@@ -1,0 +1,965 @@
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Pagination, Navigation } from "swiper";
+import { Link } from "react-router-dom";
+import { useState } from "react";
+import { Button, Modal } from "antd";
+import ProductCard from "../../components/carts/ProductCard";
+
+export function loader(data) {
+  return 0;
+}
+
+export default function HomePage() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const showModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const handleOk = () => {
+    setIsModalOpen(false);
+  };
+
+  const handleCancel = () => {
+    setIsModalOpen(false);
+  };
+
+  return (
+    <>
+      <div id="header-banner">
+        <div className="header">
+          <div className="search">
+            <div className="m1">
+              <div class="hamburger-menu">
+                <input id="menu__toggle" type="checkbox" />
+                <label class="menu__btn" for="menu__toggle">
+                  <span></span>
+                </label>
+
+                <ul class="menu__box">
+                  <li>
+                    <Link to={"/home-page"}> صفحه اصلی</Link>
+                  </li>
+                  <li>
+                    <Link to={"/category"}> دسته بندی</Link>
+                  </li>
+                  <li>
+                    <Link to={""}> پرو آنلاین</Link>
+                  </li>
+                
+                  <li>
+                    <Link to={"/about-us"}> درباره ما</Link>
+                  </li>
+                  <li>
+                    <Link to={"/call-us"}>تماس با ما </Link>
+                  </li>
+                  <li>
+                    <Link to={"/guide"}>راهنمای استفاده </Link>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div className="s1">
+              <i className="fa-sharp fa-light fa-magnifying-glass"></i>
+              <input placeholder="جستجو" type="text" />
+            </div>
+          </div>
+
+          <div className="navbar">
+            <div className="logo-section">
+              <h1>Fashion Startup</h1>
+            </div>
+            <span></span>
+            <div className="menu">
+              <ul>
+                <li>
+                  <Link to={"/home-page"}> صفحه اصلی</Link>
+                </li>
+                <li>
+                  <Link to={"/category"}> دسته بندی</Link>
+                </li>
+                <li>
+                  <Link to={""}> پرو آنلاین</Link>
+                </li>
+             
+                <li>
+                  <Link to={"/about-us"}> درباره ما</Link>
+                </li>
+                <li>
+                  <Link to={"/call-us"}>تماس با ما </Link>
+                </li>
+                <li>
+                  <Link to={"/guide"}>راهنمای استفاده </Link>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div className="login">
+            <div className="l1">
+              <a className="user" href="#">
+                <i className="fa-regular fa-user"></i>
+              </a>
+
+              <div className="shop">
+                <Modal
+                  title="Basic Modal"
+                  open={isModalOpen}
+                  onOk={handleOk}
+                  onCancel={handleCancel}
+                >
+
+
+
+
+<div id="myDropdown" className="dropdown-content">
+                <div className="cart">
+                  <div className="item">
+                    <div className="pic">
+                      <img src={process.env.PUBLIC_URL+"/assets/img/women-img (10).png"} alt="" />
+                    </div>
+                    <div className="info">
+                      <div className="icon">
+                        <i class="fa-solid fa-trash-can"></i>
+                      </div>
+                      <a href="#">
+                        <p>شلوار جین مردانه مدل مام فیت</p>
+                      </a>
+                      <div className="size-color">
+                        <div className="size">
+                          <h6>سایز: 2XL</h6>
+                        </div>
+                        <div className="color">
+                          <h6>رنگ: </h6><span></span>
+                        </div>
+                      </div>
+                      <h5>450,000 تومان</h5>
+                    </div>
+                  </div>
+                  <div className="item">
+                    <div className="pic">
+                      <img src={process.env.PUBLIC_URL+"/assets/img/women-short.png"} alt="" />
+
+                    </div>
+                    <div className="info">
+                      <div className="icon">
+                        <i class="fa-solid fa-trash-can"></i>
+                      </div>
+                      <a href="#">
+                        <p>شلوار جین مردانه مدل مام فیت</p>
+                      </a>
+                      <div className="size-color">
+                        <div className="size">
+                          <h6>سایز: 2XL</h6>
+                        </div>
+                        <div className="color">
+                          <h6>رنگ: </h6><span></span>
+                        </div>
+                      </div>
+                      <h5>450,000 تومان</h5>
+                    </div>
+                  </div>
+                  <div className="item">
+                    <div className="pic">
+                      <img src={process.env.PUBLIC_URL+"/assets/img/women-pants.png"} alt="" />
+
+                    </div>
+                    <div className="info">
+                      <div className="icon">
+                        <i class="fa-solid fa-trash-can"></i>
+                      </div>
+                      <a href="#">
+                        <p>شلوار جین مردانه مدل مام فیت</p>
+                      </a>
+                      <div className="size-color">
+                        <div className="size">
+                          <h6>سایز: 2XL</h6>
+                        </div>
+                        <div className="color">
+                          <h6>رنگ: </h6><span></span>
+                        </div>
+                      </div>
+                      <h5>450,000 تومان</h5>
+                    </div>
+                  </div>
+                  <h6>مبلغ قابل پرداخت:  <span>1,350,000 </span> تومان</h6>
+                  <div className="button">
+                    <Link className="black-btn" to={"/cart-page"} >مشاهده سبد خرید</Link>
+
+                    <Link className="white-btn" to={"/complete-purchase"} >تسویه حساب</Link>
+
+
+                  </div>
+                </div>
+              </div>
+
+
+
+
+
+                </Modal>
+
+                <Button type="primary" onClick={showModal}>
+                  <i
+                    onclick="myFunction()"
+                    className="fa-sharp fa-light fa-bag-shopping fa-xl dropbtn"
+                  ></i>
+                </Button>
+              </div>
+
+              <Link className="entry-home" to={"/email-number"}>
+                {" "}
+                وارد شوید{" "}
+              </Link>
+            </div>
+          </div>
+        </div>
+
+        <div className="s2">
+          <i className="fa-sharp fa-light fa-magnifying-glass"></i>
+          <input placeholder="جستجو کنید" type="text" />
+        </div>
+        <Swiper
+          spaceBetween={0}
+          slidesPerView={1}
+          loop={true}
+          onSlideChange={() => console.log("slide change")}
+          onSwiper={(swiper) => console.log(swiper)}
+        >
+          <div className="swiper-wrapper">
+            {" "}
+            <SwiperSlide>
+              {" "}
+              <Link to={"/all-product"} className="banner-image-link">
+                {" "}
+                <img src={process.env.PUBLIC_URL+"/assets/img/mhead.jpg"} alt="#" />{" "}
+              </Link>{" "}
+            </SwiperSlide>{" "}
+            <SwiperSlide>
+              {" "}
+              <Link to={"/all-product"} className="banner-image-link">
+                {" "}
+                <img src={process.env.PUBLIC_URL+"/assets/img/mhead2.jpg"} alt="#" />{" "}
+              </Link>{" "}
+            </SwiperSlide>{" "}
+            <SwiperSlide>
+              {" "}
+              <Link to={"/all-product"} className="banner-image-link">
+                {" "}
+                <img src={process.env.PUBLIC_URL+"/assets/img/mhead3.jpg"} alt="#" />{" "}
+              </Link>{" "}
+            </SwiperSlide>{" "}
+            <SwiperSlide>
+              {" "}
+              <Link to={"/all-product"} className="banner-image-link">
+                {" "}
+                <img src={process.env.PUBLIC_URL+"/assets/img/mhead4.jpg"} alt="#" />{" "}
+              </Link>{" "}
+            </SwiperSlide>{" "}
+          </div>
+        </Swiper>
+      </div>
+      <div id="upload-sec">
+        <div className="title">
+          <h2>با آپلود عکس موردنظر خود شروع کنید</h2>
+        </div>
+        <div className="main">
+          <div className="upload">
+            <div className="cath">
+              <a href="#">مردانه </a>
+              <span></span>
+              <a href="#"> زنانه</a>
+              <span></span>
+              <a href="#"> بچگانه</a>
+            </div>
+            <div className="items">
+              <div className="item">
+                {" "}
+                <label htmlFor="upload">
+                  {" "}
+                  <i className="fa-sharp fa-light fa-arrow-up-from-bracket fa-2xl"></i>
+                  <h5>پیراهن</h5>
+                </label>
+                <input type="file" hidden={true} id="upload" />
+              </div>
+              <div className="item">
+                {" "}
+                <label htmlFor="upload">
+                  {" "}
+                  <i className="fa-sharp fa-light fa-arrow-up-from-bracket fa-2xl"></i>
+                  <h5>شلوار</h5>
+                </label>
+                <input type="file" hidden={true} id="upload" />
+              </div>
+            </div>
+            <div className="items">
+              <div className="item">
+                {" "}
+                <label htmlFor="upload">
+                  {" "}
+                  <i className="fa-sharp fa-light fa-arrow-up-from-bracket fa-2xl"></i>
+                  <h5>کفش</h5>
+                </label>
+                <input type="file" hidden={true} id="upload" />
+              </div>
+              <div className="item">
+                {" "}
+                <label htmlFor="upload">
+                  {" "}
+                  <i className="fa-sharp fa-light fa-arrow-up-from-bracket fa-2xl"></i>
+                  <h5>کلاه</h5>
+                </label>
+                <input type="file" hidden={true} id="upload" />
+              </div>
+            </div>
+
+            <div className="view">
+              <div className="item">
+                {" "}
+                <label htmlFor="upload">
+                  {" "}
+                  <i className="fa-sharp fa-light fa-arrow-up-from-bracket fa-2xl"></i>
+                  <h5>عکس کلی</h5>
+                </label>
+                <input type="file" hidden={true} id="upload" />
+              </div>
+            </div>
+            <input type="button" className="done" value="ارسال" />
+          </div>
+          <div className="left-main">
+            <div className="text">
+              <h3>من که هستم و چه میکنم؟</h3>
+              <p>
+                سلاااام من ویرا هستم یک ربات هوشمند که توسط یک تیم جوان و نخبه
+                ساخته شدم. وظیفه من اینه که شما رو برای انتخاب لباس ست راهنمایی
+                کنم. در واقع من برنامه ریزی شدم تا با دریافت اطلاعاتی مثل عکس از
+                کاربرم اون رو در راه رسیدن به یک انتخاب مناسب راهنمایی کنم. حالا
+                من چه طوری کار میکنم؟ من یک بخش آپلود تصویر براتون قرار دادم.
+                میتونید یک عکس رو که مدنظر دارید آپلود کنید مثلا تیشرت , من برات
+                با استفاده از اون تیشرت لباس های دیگه ای که بهش میاد رو برات
+                آماده میکنم.
+              </p>
+            </div>
+            <div className="guide">
+              <div className="square">
+                <h5>۱.عکست رو آپلود کن</h5>
+              </div>
+              <div className="square">
+                <h5>۲.دکمه ارسال رو بزن</h5>
+              </div>
+              <div className="square">
+                <h5>۳.پیشنهاد های من رو ببین</h5>
+              </div>
+              <div className="square">
+                <h5>۴.دکمه خرید رو بزن</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="pro-preview">
+        <div className="products-section">
+          <div className="head">
+            <div className="title">
+              <h2>پیش نمایش محصول شما</h2>
+            </div>
+
+            <Link className="btn" to={"/all-product"}>
+              {" "}
+              مشاهده همه
+            </Link>
+          </div>
+          <Swiper
+            spaceBetween={30}
+            slidesPerView={3}
+            breakpoints={{
+              300: {
+                slidesPerView: 1,
+              },
+              576: {
+                slidesPerView: 2,
+              },
+              868: {
+                slidesPerView: 2,
+              },
+              1192: {
+                slidesPerView: 3,
+              },
+            }}
+            onSlideChange={() => console.log("slide change")}
+            onSwiper={(swiper) => console.log(swiper)}
+          >
+            <div className="swiper-wrapper">
+              <SwiperSlide>
+              <ProductCard image={process.env.PUBLIC_URL+"/assets/img/suit1.png"}/>
+              </SwiperSlide>
+              <SwiperSlide>
+              <ProductCard image={process.env.PUBLIC_URL+"/assets/img/suit2.png"}/>
+              </SwiperSlide>
+              <SwiperSlide>
+              <ProductCard image={process.env.PUBLIC_URL+"/assets/img/suit4.png"}/>
+              </SwiperSlide>
+              <SwiperSlide>
+              <ProductCard image={process.env.PUBLIC_URL+"/assets/img/suit2.png"}/>
+              </SwiperSlide>
+              <SwiperSlide>
+              <ProductCard image={process.env.PUBLIC_URL+"/assets/img/blus-girl.png"}/>
+              </SwiperSlide>
+              <SwiperSlide>
+              <ProductCard image={process.env.PUBLIC_URL+"/assets/img/girl.png"}/>
+              </SwiperSlide>
+            </div>
+          </Swiper>
+        </div>
+        <a href="#" className="genral-picture">
+          <img src={process.env.PUBLIC_URL+"/assets/img/general-picture.png"} alt="#" />
+        </a>
+        <div className="head-mobile">
+          <div className="title">
+            <h2>پیش نمایش محصول شما</h2>
+          </div>
+          <input type="button" className="btn" value="مشاهده همه" />
+        </div>
+      </div>
+      <div id="set-sug">
+        <div className="right-text">
+          <h2>ست های مرتبط براساس انتخاب شما</h2>
+          <div className="h3s">
+            <h3>ست های مردانه</h3>
+            <h3>ست های زنانه</h3>
+            <h3>ست های بچه گانه</h3>
+          </div>
+        </div>
+        <div className="products-section">
+          <Swiper
+            spaceBetween={30}
+            slidesPerView={3}
+            breakpoints={{
+              300: {
+                slidesPerView: 1,
+              },
+              576: {
+                slidesPerView: 2,
+              },
+              868: {
+                slidesPerView: 2,
+              },
+              1192: {
+                slidesPerView: 3,
+              },
+            }}
+            onSlideChange={() => console.log("slide change")}
+            onSwiper={(swiper) => console.log(swiper)}
+          >
+            <div className="swiper-wrapper">
+              <SwiperSlide>
+              <ProductCard image={process.env.PUBLIC_URL+"/assets/img/suit2.png"}/>
+              </SwiperSlide>
+              <SwiperSlide>
+              <ProductCard image={process.env.PUBLIC_URL+"/assets/img/suit5.png"}/>
+              </SwiperSlide>
+              <SwiperSlide>
+              <ProductCard image={process.env.PUBLIC_URL+"/assets/img/suit6.png"}/>
+              </SwiperSlide>
+              <SwiperSlide>
+              <ProductCard image={process.env.PUBLIC_URL+"/assets/img/women-img32.png"}/>
+              </SwiperSlide>
+              <SwiperSlide>
+                <Link to={"/single-product"} className="product">
+                  <img src={process.env.PUBLIC_URL+"/assets/img/blus-girl.png"} alt="" />
+                  <p>ست زنانه</p>
+                  <div className="rate-cath">
+                    <h6>اسپرت زنانه</h6>
+                    <div className="rate">
+                      <h6>4.1</h6>
+                      <i className="fa-sharp fa-solid fa-star"></i>
+                    </div>
+                  </div>
+                  <div className="price">
+                    <h4>۱,۲۵۰,۰۰۰</h4>
+                    <p>تومان</p>
+                  </div>
+                  <input type="button" value="افزودن به سبد خرید" />
+                </Link>
+              </SwiperSlide>
+              <SwiperSlide>
+                <Link to={"/single-product"} className="product">
+                  <img src={process.env.PUBLIC_URL+"/assets/img/girl.png"} alt="" />
+                  <p>ست زنانه</p>
+                  <div className="rate-cath">
+                    <h6>اسپرت زنانه</h6>
+                    <div className="rate">
+                      <h6>4.1</h6>
+                      <i className="fa-sharp fa-solid fa-star"></i>
+                    </div>
+                  </div>
+                  <div className="price">
+                    <h4>۱,۲۵۰,۰۰۰</h4>
+                    <p>تومان</p>
+                  </div>
+                  <input type="button" value="افزودن به سبد خرید" />
+                </Link>
+              </SwiperSlide>
+            </div>
+          </Swiper>
+        </div>
+      </div>
+      <div id="pro-discounts">
+        <div className="products-section">
+          <Swiper
+            spaceBetween={30}
+            slidesPerView={3}
+            breakpoints={{
+              300: {
+                slidesPerView: 1,
+              },
+              576: {
+                slidesPerView: 2,
+              },
+              868: {
+                slidesPerView: 2,
+              },
+              1192: {
+                slidesPerView: 3,
+              },
+            }}
+            onSlideChange={() => console.log("slide change")}
+            onSwiper={(swiper) => console.log(swiper)}
+          >
+            <div className="swiper-wrapper">
+              <SwiperSlide>
+                <Link to={"/single-product"} className="product">
+                  <img src={process.env.PUBLIC_URL+"/assets/img/women-img32.png"} alt="" />
+                  <p>ست زنانه</p>
+                  <div className="rate-cath">
+                    <h6>اسپرت زنانه</h6>
+                    <div className="rate">
+                      <h6>4.1</h6>
+                      <i className="fa-sharp fa-solid fa-star"></i>
+                    </div>
+                  </div>
+                  <div className="price">
+                    <h4>۱,۲۵۰,۰۰۰</h4>
+                    <p>تومان</p>
+                  </div>
+                  <input type="button" value="افزودن به سبد خرید" />
+                </Link>
+              </SwiperSlide>
+              <SwiperSlide>
+                <Link to={"/single-product"} className="product">
+                  <img src={process.env.PUBLIC_URL+"/assets/img/blus-girl.png"} alt="" />
+                  <p>ست زنانه</p>
+                  <div className="rate-cath">
+                    <h6>اسپرت زنانه</h6>
+                    <div className="rate">
+                      <h6>4.1</h6>
+                      <i className="fa-sharp fa-solid fa-star"></i>
+                    </div>
+                  </div>
+                  <div className="price">
+                    <h4>۱,۲۵۰,۰۰۰</h4>
+                    <p>تومان</p>
+                  </div>
+                  <input type="button" value="افزودن به سبد خرید" />
+                </Link>
+              </SwiperSlide>
+              <SwiperSlide>
+                <Link to={"/single-product"} className="product">
+                  <img
+                    src={process.env.PUBLIC_URL+"/assets/img/8ff81791eba96c1bb5d90e483f96f7ba.jpg"}
+                    alt=""
+                  />
+                  <p>ست زنانه</p>
+                  <div className="rate-cath">
+                    <h6>اسپرت زنانه</h6>
+                    <div className="rate">
+                      <h6>4.1</h6>
+                      <i className="fa-sharp fa-solid fa-star"></i>
+                    </div>
+                  </div>
+                  <div className="price">
+                    <h4>۱,۲۵۰,۰۰۰</h4>
+                    <p>تومان</p>
+                  </div>
+                  <input type="button" value="افزودن به سبد خرید" />
+                </Link>
+              </SwiperSlide>
+              <SwiperSlide>
+                <Link to={"/single-product"} className="product">
+                  <img
+                    src={process.env.PUBLIC_URL+"/assets/img/a5e698cd697088e7f637645a748df3d1.jpg"}
+                    alt=""
+                  />
+                  <p>ست زنانه</p>
+                  <div className="rate-cath">
+                    <h6>اسپرت زنانه</h6>
+                    <div className="rate">
+                      <h6>4.1</h6>
+                      <i className="fa-sharp fa-solid fa-star"></i>
+                    </div>
+                  </div>
+                  <div className="price">
+                    <h4>۱,۲۵۰,۰۰۰</h4>
+                    <p>تومان</p>
+                  </div>
+                  <input type="button" value="افزودن به سبد خرید" />
+                </Link>
+              </SwiperSlide>
+              <SwiperSlide>
+                <Link to={"/single-product"} className="product">
+                  <img src={process.env.PUBLIC_URL+"/assets/img/blus-girl.png"} alt="" />
+                  <p>ست زنانه</p>
+                  <div className="rate-cath">
+                    <h6>اسپرت زنانه</h6>
+                    <div className="rate">
+                      <h6>4.1</h6>
+                      <i className="fa-sharp fa-solid fa-star"></i>
+                    </div>
+                  </div>
+                  <div className="price">
+                    <h4>۱,۲۵۰,۰۰۰</h4>
+                    <p>تومان</p>
+                  </div>
+                  <input type="button" value="افزودن به سبد خرید" />
+                </Link>
+              </SwiperSlide>
+              <SwiperSlide>
+                <Link to={"/single-product"} className="product">
+                  <img src={process.env.PUBLIC_URL+"/assets/img/girl.png"} alt="" />
+                  <p>ست زنانه</p>
+                  <div className="rate-cath">
+                    <h6>اسپرت زنانه</h6>
+                    <div className="rate">
+                      <h6>4.1</h6>
+                      <i className="fa-sharp fa-solid fa-star"></i>
+                    </div>
+                  </div>
+                  <div className="price">
+                    <h4>۱,۲۵۰,۰۰۰</h4>
+                    <p>تومان</p>
+                  </div>
+                  <input type="button" value="افزودن به سبد خرید" />
+                </Link>
+              </SwiperSlide>
+            </div>
+          </Swiper>
+        </div>
+        <div className="off">
+          <div className="t-i">
+            <h3>
+              تخفیفات
+              <br />
+              شگفت
+              <br />
+              انگیز
+            </h3>
+            <i className="fa-light fa-percent fa-7x"></i>
+          </div>
+
+          <Link to={"/all-product"}>مشاهده همه</Link>
+        </div>
+      </div>
+      <div id="img-cathegory">
+        <a href="#">
+          <img src={process.env.PUBLIC_URL+"/assets/img/mens-img.png"} alt="" />
+        </a>
+        <a href="#">
+          <img src={process.env.PUBLIC_URL+"/assets/img/kids-img.png"} alt="" />
+        </a>
+        <a href="#">
+          <img src={process.env.PUBLIC_URL+"/assets/img/womens-img.png"} alt="" />
+        </a>
+      </div>
+      <div id="pro-carousel">
+        <div className="head">
+          <h2>پر فروش ترین ها</h2>
+
+          <Link to={"/all-product"}>مشاهده همه</Link>
+        </div>
+        <div className="products-section">
+          <Swiper
+            spaceBetween={30}
+            slidesPerView={4.4}
+            breakpoints={{
+              300: {
+                slidesPerView: 1,
+              },
+              576: {
+                slidesPerView: 2,
+              },
+              868: {
+                slidesPerView: 3,
+              },
+              1192: {
+                slidesPerView: 4.4,
+              },
+            }}
+            onSlideChange={() => console.log("slide change")}
+            onSwiper={(swiper) => console.log(swiper)}
+          >
+            <div className="swiper-wrapper">
+              <SwiperSlide>
+                <Link to={"/single-product"} className="product">
+                  <img
+                    src={process.env.PUBLIC_URL+"/assets/img/3fc9d210bb93f59f8ba6e874cc14b402.png"}
+                    alt=""
+                  />
+                  <p>ست زنانه</p>
+                  <div className="rate-cath">
+                    <h6>اسپرت زنانه</h6>
+                    <div className="rate">
+                      <h6>4.1</h6>
+                      <i className="fa-sharp fa-solid fa-star"></i>
+                    </div>
+                  </div>
+                  <div className="price">
+                    <h4>۱,۲۵۰,۰۰۰</h4>
+                    <p>تومان</p>
+                  </div>
+                  <input type="button" value="افزودن به سبد خرید" />
+                </Link>
+              </SwiperSlide>
+              <SwiperSlide>
+                <Link to={"/single-product"} className="product">
+                  <img
+                    src={process.env.PUBLIC_URL+"/assets/img/294928046418399cfce47e85c7f41b6b.png"}
+                    alt=""
+                  />
+                  <p>ست زنانه</p>
+                  <div className="rate-cath">
+                    <h6>اسپرت زنانه</h6>
+                    <div className="rate">
+                      <h6>4.1</h6>
+                      <i className="fa-sharp fa-solid fa-star"></i>
+                    </div>
+                  </div>
+                  <div className="price">
+                    <h4>۱,۲۵۰,۰۰۰</h4>
+                    <p>تومان</p>
+                  </div>
+                  <input type="button" value="افزودن به سبد خرید" />
+                </Link>
+              </SwiperSlide>
+              <SwiperSlide>
+                <Link to={"/single-product"} className="product">
+                  <img src={process.env.PUBLIC_URL+"/assets/img/damnkid.png"} alt="" />
+                  <p>ست زنانه</p>
+                  <div className="rate-cath">
+                    <h6>اسپرت زنانه</h6>
+                    <div className="rate">
+                      <h6>4.1</h6>
+                      <i className="fa-sharp fa-solid fa-star"></i>
+                    </div>
+                  </div>
+                  <div className="price">
+                    <h4>۱,۲۵۰,۰۰۰</h4>
+                    <p>تومان</p>
+                  </div>
+                  <input type="button" value="افزودن به سبد خرید" />
+                </Link>
+              </SwiperSlide>
+              <SwiperSlide>
+                <Link to={"/single-product"} className="product">
+                  <img
+                    src={process.env.PUBLIC_URL+"/assets/img/0a31f8c3cf708c6ae1bfe12d3b2c7a70.png"}
+                    alt=""
+                  />
+                  <p>ست زنانه</p>
+                  <div className="rate-cath">
+                    <h6>اسپرت زنانه</h6>
+                    <div className="rate">
+                      <h6>4.1</h6>
+                      <i className="fa-sharp fa-solid fa-star"></i>
+                    </div>
+                  </div>
+                  <div className="price">
+                    <h4>۱,۲۵۰,۰۰۰</h4>
+                    <p>تومان</p>
+                  </div>
+                  <input type="button" value="افزودن به سبد خرید" />
+                </Link>
+              </SwiperSlide>
+              <SwiperSlide>
+                <Link to={"/single-product"} className="product">
+                  <img src={process.env.PUBLIC_URL+"/assets/img/blus-girl.png"} alt="" />
+                  <p>ست زنانه</p>
+                  <div className="rate-cath">
+                    <h6>اسپرت زنانه</h6>
+                    <div className="rate">
+                      <h6>4.1</h6>
+                      <i className="fa-sharp fa-solid fa-star"></i>
+                    </div>
+                  </div>
+                  <div className="price">
+                    <h4>۱,۲۵۰,۰۰۰</h4>
+                    <p>تومان</p>
+                  </div>
+                  <input type="button" value="افزودن به سبد خرید" />
+                </Link>
+              </SwiperSlide>
+              <SwiperSlide>
+                <Link to={"/single-product"} className="product">
+                  <img src={process.env.PUBLIC_URL+"/assets/img/girl.png"} alt="" />
+                  <p>ست زنانه</p>
+                  <div className="rate-cath">
+                    <h6>اسپرت زنانه</h6>
+                    <div className="rate">
+                      <h6>4.1</h6>
+                      <i className="fa-sharp fa-solid fa-star"></i>
+                    </div>
+                  </div>
+                  <div className="price">
+                    <h4>۱,۲۵۰,۰۰۰</h4>
+                    <p>تومان</p>
+                  </div>
+                  <input type="button" value="افزودن به سبد خرید" />
+                </Link>
+              </SwiperSlide>
+            </div>
+          </Swiper>
+        </div>
+      </div>
+      <div id="pro-carousel">
+        <div className="head">
+          <h2>پر بازدیدترین های ما</h2>
+          <Link to={"/all-product"}>مشاهده همه</Link>
+        </div>
+        <div to={"/single-product"} className="products-section">
+          <Swiper
+            spaceBetween={30}
+            slidesPerView={4.4}
+            breakpoints={{
+              300: {
+                slidesPerView: 1,
+              },
+              576: {
+                slidesPerView: 2,
+              },
+              868: {
+                slidesPerView: 3,
+              },
+              1192: {
+                slidesPerView: 4.4,
+              },
+            }}
+            onSlideChange={() => console.log("slide change")}
+            onSwiper={(swiper) => console.log(swiper)}
+          >
+            <div className="swiper-wrapper">
+              <SwiperSlide>
+                <Link to={"/single-product"} className="product">
+                  <img src={process.env.PUBLIC_URL+"/assets/img/summer-style.png"} alt="" />
+                  <p>ست زنانه</p>
+                  <div className="rate-cath">
+                    <h6>اسپرت زنانه</h6>
+                    <div className="rate">
+                      <h6>4.1</h6>
+                      <i className="fa-sharp fa-solid fa-star"></i>
+                    </div>
+                  </div>
+                  <div className="price">
+                    <h4>۱,۲۵۰,۰۰۰</h4>
+                    <p>تومان</p>
+                  </div>
+                  <input type="button" value="افزودن به سبد خرید" />
+                </Link>
+              </SwiperSlide>
+              <SwiperSlide>
+                <Link to={"/single-product"} className="product">
+                  <img
+                    src={process.env.PUBLIC_URL+"/assets/img/summer-style2.png"}
+                    alt=""
+                  />
+                  <p>ست زنانه</p>
+                  <div className="rate-cath">
+                    <h6>اسپرت زنانه</h6>
+                    <div className="rate">
+                      <h6>4.1</h6>
+                      <i className="fa-sharp fa-solid fa-star"></i>
+                    </div>
+                  </div>
+                  <div className="price">
+                    <h4>۱,۲۵۰,۰۰۰</h4>
+                    <p>تومان</p>
+                  </div>
+                  <input type="button" value="افزودن به سبد خرید" />
+                </Link>
+              </SwiperSlide>
+              <SwiperSlide>
+                <Link to={"/single-product"} className="product">
+                  <img src={process.env.PUBLIC_URL+"/assets/img/damnman.png"} alt="" />
+                  <p>ست زنانه</p>
+                  <div className="rate-cath">
+                    <h6>اسپرت زنانه</h6>
+                    <div className="rate">
+                      <h6>4.1</h6>
+                      <i className="fa-sharp fa-solid fa-star"></i>
+                    </div>
+                  </div>
+                  <div className="price">
+                    <h4>۱,۲۵۰,۰۰۰</h4>
+                    <p>تومان</p>
+                  </div>
+                  <input type="button" value="افزودن به سبد خرید" />
+                </Link>
+              </SwiperSlide>
+              <SwiperSlide>
+                <Link to={"/single-product"} className="product">
+                  <img src={process.env.PUBLIC_URL+"/assets/img/damnman2.png"} alt="" />
+                  <p>ست زنانه</p>
+                  <div className="rate-cath">
+                    <h6>اسپرت زنانه</h6>
+                    <div className="rate">
+                      <h6>4.1</h6>
+                      <i className="fa-sharp fa-solid fa-star"></i>
+                    </div>
+                  </div>
+                  <div className="price">
+                    <h4>۱,۲۵۰,۰۰۰</h4>
+                    <p>تومان</p>
+                  </div>
+                  <input type="button" value="افزودن به سبد خرید" />
+                </Link>
+              </SwiperSlide>
+              <SwiperSlide>
+                <Link to={"/single-product"} className="product">
+                  <img src={process.env.PUBLIC_URL+"/assets/img/blus-girl.png"} alt="" />
+                  <p>ست زنانه</p>
+                  <div className="rate-cath">
+                    <h6>اسپرت زنانه</h6>
+                    <div className="rate">
+                      <h6>4.1</h6>
+                      <i className="fa-sharp fa-solid fa-star"></i>
+                    </div>
+                  </div>
+                  <div className="price">
+                    <h4>۱,۲۵۰,۰۰۰</h4>
+                    <p>تومان</p>
+                  </div>
+                  <input type="button" value="افزودن به سبد خرید" />
+                </Link>
+              </SwiperSlide>
+              <SwiperSlide>
+                <Link to={"/single-product"} className="product">
+                  <img src={process.env.PUBLIC_URL+"/assets/img/girl.png"} alt="" />
+                  <p>ست زنانه</p>
+                  <div className="rate-cath">
+                    <h6>اسپرت زنانه</h6>
+                    <div className="rate">
+                      <h6>4.1</h6>
+                      <i className="fa-sharp fa-solid fa-star"></i>
+                    </div>
+                  </div>
+                  <div className="price">
+                    <h4>۱,۲۵۰,۰۰۰</h4>
+                    <p>تومان</p>
+                  </div>
+                  <input type="button" value="افزودن به سبد خرید" />
+                </Link>
+              </SwiperSlide>
+            </div>
+          </Swiper>
+        </div>
+      </div>
+    </>
+  );
+}
