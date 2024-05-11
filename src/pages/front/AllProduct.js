@@ -162,15 +162,15 @@ export default function AllProduct() {
             <a href="#">مرتبط‌ترین</a>
           </div>
           <div className="pro-row">
-            <ProductCard image={process.env.PUBLIC_URL+"/assets/img/damnman2.png"}/>
-            <ProductCard image={process.env.PUBLIC_URL+"/assets/img/damnman.png"}/>
-            <ProductCard image={process.env.PUBLIC_URL+"/assets/img/975486f20655ffebd5154cf19f72e480.jpg"}/>
+            <ProductCard image={process.env.PUBLIC_URL + "/assets/img/damnman2.png"} />
+            <ProductCard image={process.env.PUBLIC_URL + "/assets/img/damnman.png"} />
+            <ProductCard image={process.env.PUBLIC_URL + "/assets/img/975486f20655ffebd5154cf19f72e480.jpg"} />
           </div>
           <div className="pro-row">
-            <ProductCard image={process.env.PUBLIC_URL+"/assets/img/suit1.png"} /> <ProductCard image={process.env.PUBLIC_URL+"/assets/img/blus-girl.png"} /> <ProductCard image={process.env.PUBLIC_URL+"/assets/img/suit1.png"} />
+            <ProductCard image={process.env.PUBLIC_URL + "/assets/img/suit1.png"} /> <ProductCard image={process.env.PUBLIC_URL + "/assets/img/blus-girl.png"} /> <ProductCard image={process.env.PUBLIC_URL + "/assets/img/suit1.png"} />
           </div>
           <div className="pro-row">
-            <ProductCard  image={process.env.PUBLIC_URL+"/assets/img/975486f20655ffebd5154cf19f72e480.jpg"}/> <ProductCard image={process.env.PUBLIC_URL+"/assets/img/blus-boy.png"} /> <ProductCard image={process.env.PUBLIC_URL+"/assets/img/suit1.png"} />
+            <ProductCard image={process.env.PUBLIC_URL + "/assets/img/975486f20655ffebd5154cf19f72e480.jpg"} /> <ProductCard image={process.env.PUBLIC_URL + "/assets/img/blus-boy.png"} /> <ProductCard image={process.env.PUBLIC_URL + "/assets/img/suit1.png"} />
           </div>
 
           <div className="pro-mobile">
