@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom"
 import { Swiper, SwiperSlide } from 'swiper/react';
-import ProductCard from "../../components/carts/ProductCard";
+import ProductCard from "../../components/cards/ProductCard";
 export function loader(data) {
     return 0
 }
