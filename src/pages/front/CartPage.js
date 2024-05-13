@@ -4,6 +4,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { InputNumber, InputGroup, Stack } from 'rsuite';
 import { useState } from "react";
 import ProductCard from "../../components/cards/ProductCard";
+import SingelCard from "../../components/cards/SingelCard";
 
 export function loader(data) {
   return 0;
@@ -21,106 +22,9 @@ export default function CartPage() {
     <>
       <div id="cart-main">
         <div id="cart-products">
-          <div className="cart-pro">
-            <div className="right-sec">
-              <img src={process.env.PUBLIC_URL + "/assets/img/Rectangle84.jpg"} />
-              <div className="count">
-                <InputGroup className="count-sec">
-                  <InputGroup.Button onClick={handleMinus}>-</InputGroup.Button>
-                  <InputNumber className={'custom-input-number'} value={value} onChange={setValue} />
-                  <InputGroup.Button onClick={handlePlus}>+</InputGroup.Button>
-                </InputGroup>
-              </div>
-            </div>
-            <div className="left-sec">
-              <Link className="link-ti" to={"/single-product"}>
-                <div className="titel-pro">
-                  <h2>شلوار جین زنانه مدل مام فیت</h2>
-                  <i class="fa-solid fa-trash-can fa-xl"></i>
-                </div>
-              </Link>
-              <div className="color-pro">
-                <div className="col-itself"></div>
-                <p>رنگ: آبی</p>
-              </div>
-              <div className="size-pro">
-                <i className="fa-solid fa-arrows-up-down fa-xl "></i>
-                <p>سایز: 2XL</p>
-              </div>
-              <div className="price-pro">
-                <h5>450,000 تومان</h5>
-                <h4>416,000 تومان</h4>
-              </div>
-            </div>
-          </div>
-          <div className="cart-pro">
-            <div className="right-sec">
-            <img
-                src={process.env.PUBLIC_URL + "/assets/img/55a6c2cc48275acdbcf86a9ad2a9be2f.jpg"}
-              />
-              <div className="count">
-                <InputGroup className="count-sec">
-                  <InputGroup.Button onClick={handleMinus}>-</InputGroup.Button>
-                  <InputNumber className={'custom-input-number'} value={value} onChange={setValue} />
-                  <InputGroup.Button onClick={handlePlus}>+</InputGroup.Button>
-                </InputGroup>
-              </div>
-            </div>
-            <div className="left-sec">
-              <Link className="link-ti" to={"/single-product"}>
-                <div className="titel-pro">
-                  <h2>شلوار جین زنانه مدل مام فیت</h2>
-                  <i class="fa-solid fa-trash-can fa-xl"></i>
-                </div>
-              </Link>
-              <div className="color-pro">
-                <div className="col-itself"></div>
-                <p>رنگ: آبی</p>
-              </div>
-              <div className="size-pro">
-                <i className="fa-solid fa-arrows-up-down fa-xl "></i>
-                <p>سایز: 2XL</p>
-              </div>
-              <div className="price-pro">
-                <h5>450,000 تومان</h5>
-                <h4>416,000 تومان</h4>
-              </div>
-            </div>
-          </div>
-          <div className="cart-pro">
-            <div className="right-sec">
-            <img
-              src={process.env.PUBLIC_URL + "/assets/img/d1725dcdc1938cf0af596beaf20ad453.jpg"}
-            />
-              <div className="count">
-                <InputGroup className="count-sec">
-                  <InputGroup.Button onClick={handleMinus}>-</InputGroup.Button>
-                  <InputNumber className={'custom-input-number'} value={value} onChange={setValue} />
-                  <InputGroup.Button onClick={handlePlus}>+</InputGroup.Button>
-                </InputGroup>
-              </div>
-            </div>
-            <div className="left-sec">
-              <Link className="link-ti" to={"/single-product"}>
-                <div className="titel-pro">
-                  <h2>شلوار جین زنانه مدل مام فیت</h2>
-                  <i class="fa-solid fa-trash-can fa-xl"></i>
-                </div>
-              </Link>
-              <div className="color-pro">
-                <div className="col-itself"></div>
-                <p>رنگ: آبی</p>
-              </div>
-              <div className="size-pro">
-                <i className="fa-solid fa-arrows-up-down fa-xl "></i>
-                <p>سایز: 2XL</p>
-              </div>
-              <div className="price-pro">
-                <h5>450,000 تومان</h5>
-                <h4>416,000 تومان</h4>
-              </div>
-            </div>
-          </div>
+          <SingelCard image={process.env.PUBLIC_URL + "/assets/img/Rectangle84.jpg"}/>
+          <SingelCard image={process.env.PUBLIC_URL + "/assets/img/55a6c2cc48275acdbcf86a9ad2a9be2f.jpg"}/>
+          <SingelCard image={process.env.PUBLIC_URL + "/assets/img/d1725dcdc1938cf0af596beaf20ad453.jpg"}/>
         </div>
         <div id="cart-order">
           <div className="order-detail">
