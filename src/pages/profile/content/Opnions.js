@@ -1,14 +1,12 @@
-import { Link, Outlet } from "react-router-dom"
+import OpnionCard from "../../../components/cards/OpnionCard";
 
 export function loader(data) {
-    return 0
+  return 0;
 }
 export default function Opinions() {
-
-    return (
-
-        <>
-<div id="opnions">
+  return (
+    <>
+      <div id="opnions">
         <div class="title">
           <i class="fa-light fa-arrow-right"></i>
           <h4>دیدگاه ها</h4>
@@ -21,45 +19,22 @@ export default function Opinions() {
             <div class="head1">
               <a href="#">دیدگاه های من</a>
             </div>
-
-
           </div>
           <div class="items">
             <section class="item">
-              <Link to={"/single-product"}  class="product">
-                <div class="product1">
-                  <img     src={process.env.PUBLIC_URL + "/assets/img/damnman.png"} alt="#"/>
-                  <span>لگینگ ورزشی مردانه کریویت مدل SS0227</span>
-                </div>
-                <a href="#">ثبت دیدگاه</a>
-              </Link>
-              <Link to={"/single-product"} class="product">
-                <div class="product1">
-                  <img   src={process.env.PUBLIC_URL + "/assets/img/damnman2.png"} alt="#"/>
-                  <span>پیراهن ورزشی مردانه کرین مدل SS0226</span>
-                </div>
-                <a href="#">ثبت دیدگاه</a>
-              </Link>
-              <Link to={"/single-product"} class="product">
-                <div class="product1">
-                  <img   src={process.env.PUBLIC_URL + "/assets/img/damnman.png"} alt="#"/>
-                  <span>پیراهن ورزشی مردانه کرین مدل SS0226</span>
-                </div>
-                <a href="#">ثبت دیدگاه</a>
-              </Link>
-
+              <OpnionCard
+                image={process.env.PUBLIC_URL + "/assets/img/damnman.png"}
+              />
+              <OpnionCard
+                image={process.env.PUBLIC_URL + "/assets/img/damnman2.png"}
+              />
+              <OpnionCard
+                image={process.env.PUBLIC_URL + "/assets/img/damnman.png"}
+              />
             </section>
           </div>
-
-
         </div>
-
       </div>
-
-
-
-        </>
-
-    )
-
+    </>
+  );
 }
