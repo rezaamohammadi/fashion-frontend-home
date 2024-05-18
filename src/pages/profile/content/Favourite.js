@@ -1,4 +1,5 @@
 import { Link, Outlet } from "react-router-dom";
+import FavProduct from "../../../components/cards/FavProduct";
 
 export function loader(data) {
   return 0;
@@ -19,135 +20,17 @@ export default function Favourite() {
           </div>
           <div class="items">
             <section class="item">
-              <Link to={"/single-product"} class="product">
-                {" "}
-                <div className="favorite-img">
-                  {" "}
-                  <img
-                    src={process.env.PUBLIC_URL + "/assets/img/blus-boy.png"}
-                    alt="#"
-                  />{" "}
-                  <i class="fa-solid fa-heart fa-2xl"></i>{" "}
-                </div>{" "}
-                <h5 class="name">دورس مردانه</h5>{" "}
-                <div class="rate">
-                  {" "}
-                  <p class="r1">اسپرت مردانه</p>{" "}
-                  <div class="star">
-                    {" "}
-                    <span>4.1</span> <i class="fa-solid fa-star"></i>{" "}
-                  </div>{" "}
-                </div>{" "}
-                <div class="cost">
-                  {" "}
-                  <p class="amount">۱,۲۵۰,۰۰۰</p> <p>تومان</p>{" "}
-                </div>{" "}
-                <a href="#">افزودن به سبد خرید</a>{" "}
-              </Link>
+              <FavProduct image={process.env.PUBLIC_URL + "/assets/img/blus-boy.png"}/>
+              
 
-              <Link to={"/single-product"} class="product">
-                {" "}
-                <div className="favorite-img">
-                  {" "}
-                  <img
-                    src={process.env.PUBLIC_URL + "/assets/img/blus-boy.png"}
-                    alt="#"
-                  />{" "}
-                  <i class="fa-solid fa-heart fa-2xl"></i>{" "}
-                </div>{" "}
-                <h5 class="name">دورس مردانه</h5>{" "}
-                <div class="rate">
-                  {" "}
-                  <p class="r1">اسپرت مردانه</p>{" "}
-                  <div class="star">
-                    {" "}
-                    <span>4.1</span> <i class="fa-solid fa-star"></i>{" "}
-                  </div>{" "}
-                </div>{" "}
-                <div class="cost">
-                  {" "}
-                  <p class="amount">۱,۲۵۰,۰۰۰</p> <p>تومان</p>{" "}
-                </div>{" "}
-                <a href="#">افزودن به سبد خرید</a>{" "}
-              </Link>
+              <FavProduct image={process.env.PUBLIC_URL + "/assets/img/blus-boy.png"}/>
 
-              <Link to={"/single-product"} class="product">
-                {" "}
-                <div className="favorite-img">
-                  {" "}
-                  <img
-                    src={process.env.PUBLIC_URL + "/assets/img/blus-boy.png"}
-                    alt="#"
-                  />{" "}
-                  <i class="fa-solid fa-heart fa-2xl"></i>{" "}
-                </div>{" "}
-                <h5 class="name">دورس مردانه</h5>{" "}
-                <div class="rate">
-                  {" "}
-                  <p class="r1">اسپرت مردانه</p>{" "}
-                  <div class="star">
-                    {" "}
-                    <span>4.1</span> <i class="fa-solid fa-star"></i>{" "}
-                  </div>{" "}
-                </div>{" "}
-                <div class="cost">
-                  {" "}
-                  <p class="amount">۱,۲۵۰,۰۰۰</p> <p>تومان</p>{" "}
-                </div>{" "}
-                <a href="#">افزودن به سبد خرید</a>{" "}
-              </Link>
+              <FavProduct image={process.env.PUBLIC_URL + "/assets/img/blus-boy.png"}/>
 
-              <Link to={"/single-product"} class="product">
-                {" "}
-                <div className="favorite-img">
-                  {" "}
-                  <img
-                    src={process.env.PUBLIC_URL + "/assets/img/blus-boy.png"}
-                    alt="#"
-                  />{" "}
-                  <i class="fa-solid fa-heart fa-2xl"></i>{" "}
-                </div>{" "}
-                <h5 class="name">دورس مردانه</h5>{" "}
-                <div class="rate">
-                  {" "}
-                  <p class="r1">اسپرت مردانه</p>{" "}
-                  <div class="star">
-                    {" "}
-                    <span>4.1</span> <i class="fa-solid fa-star"></i>{" "}
-                  </div>{" "}
-                </div>{" "}
-                <div class="cost">
-                  {" "}
-                  <p class="amount">۱,۲۵۰,۰۰۰</p> <p>تومان</p>{" "}
-                </div>{" "}
-                <a href="#">افزودن به سبد خرید</a>{" "}
-              </Link>
+              <FavProduct image={process.env.PUBLIC_URL + "/assets/img/blus-boy.png"}/>
 
-              <Link to={"/single-product"} class="product">
-                {" "}
-                <div className="favorite-img">
-                  {" "}
-                  <img
-                    src={process.env.PUBLIC_URL + "/assets/img/blus-boy.png"}
-                    alt="#"
-                  />{" "}
-                  <i class="fa-solid fa-heart fa-2xl"></i>{" "}
-                </div>{" "}
-                <h5 class="name">دورس مردانه</h5>{" "}
-                <div class="rate">
-                  {" "}
-                  <p class="r1">اسپرت مردانه</p>{" "}
-                  <div class="star">
-                    {" "}
-                    <span>4.1</span> <i class="fa-solid fa-star"></i>{" "}
-                  </div>{" "}
-                </div>{" "}
-                <div class="cost">
-                  {" "}
-                  <p class="amount">۱,۲۵۰,۰۰۰</p> <p>تومان</p>{" "}
-                </div>{" "}
-                <a href="#">افزودن به سبد خرید</a>{" "}
-              </Link>
+              <FavProduct image={process.env.PUBLIC_URL + "/assets/img/blus-boy.png"}/>
+              
             </section>
           </div>
         </div>
