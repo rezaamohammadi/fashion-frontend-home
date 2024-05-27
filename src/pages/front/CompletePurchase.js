@@ -5,10 +5,26 @@ import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import Modal from "@mui/material/Modal";
+import ProgressBar from "@badrap/bar-of-progress";
 
-export function loader(data) {
-    return 0
-}const style = {
+const progress = new ProgressBar({
+    size: 2,
+    color: "#29e",
+    className: "bar-of-progress",
+    delay: 80,
+
+});
+
+export function loader() {
+    progress.start();
+    setTimeout(() => {
+        progress.finish();
+    }, 1000)
+    return true
+}
+
+
+const style = {
   position: "absolute",
   top: "50%",
   left: "50%",

@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@badrap/bar-of-progress": "^0.2.2",
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.0",
     "@fortawesome/fontawesome-svg-core": "^6.5.1",
@@ -23,6 +24,7 @@
     "react-redux": "^9.1.0",
     "react-router-dom": "^6.21.3",
     "react-scripts": "5.0.1",
+    "react-top-loading-bar": "^2.3.1",
     "react-transition-group": "^4.4.5",
     "redux": "^5.0.1",
     "rsuite": "^5.59.0",

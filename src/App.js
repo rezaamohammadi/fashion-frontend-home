@@ -1,11 +1,28 @@
 import { Link, Outlet, useLocation } from "react-router-dom";
-
 import { Button, Modal } from 'antd';
 import { useState } from 'react';
+import ProgressBar from "@badrap/bar-of-progress";
+
+const progress = new ProgressBar({
+    size: 2,
+    color: "#29e",
+    className: "bar-of-progress",
+    delay: 80,
+
+});
+
+export function loader() {
+    progress.start();
+    setTimeout(() => {
+        progress.finish();
+    }, 1000)
+    return true
+}
+
 function App() {
   const location = useLocation()
   const [isModalOpen, setIsModalOpen] = useState(false);
-
+  
   const showModal = () => {
     setIsModalOpen(true);
   };
@@ -17,8 +34,8 @@ function App() {
   const handleCancel = () => {
     setIsModalOpen(false);
   };
-
   console.log(location.pathname)
+  
   return (
     <>
 
@@ -34,10 +51,9 @@ function App() {
               <span></span>
           </label>
 
-          <ul class="menu__box">
-   
+          <ul class="menu__box">  
                 <li>
-                  <Link to={"/home-page"}> صفحه اصلی</Link>
+                  <Link  to={"/home-page"}> صفحه اصلی</Link>
                 </li>
                 <li>
                   <Link to={"/category"}> دسته بندی</Link>

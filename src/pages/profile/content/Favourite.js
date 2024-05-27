@@ -1,9 +1,23 @@
 import { Link, Outlet } from "react-router-dom";
 import FavProduct from "../../../components/cards/FavProduct";
+import ProgressBar from "@badrap/bar-of-progress";
 
-export function loader(data) {
-  return 0;
+const progress = new ProgressBar({
+    size: 2,
+    color: "#29e",
+    className: "bar-of-progress",
+    delay: 80,
+
+});
+
+export function loader() {
+    progress.start();
+    setTimeout(() => {
+        progress.finish();
+    }, 1000)
+    return true
 }
+
 export default function Favourite() {
   return (
     <>

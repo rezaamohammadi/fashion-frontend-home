@@ -1,9 +1,24 @@
 import { Link } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 import ProductCard from "../../components/cards/ProductCard";
-export function loader(data) {
-  return 0;
+import ProgressBar from "@badrap/bar-of-progress";
+
+const progress = new ProgressBar({
+    size: 2,
+    color: "#29e",
+    className: "bar-of-progress",
+    delay: 80,
+
+});
+
+export function loader() {
+    progress.start();
+    setTimeout(() => {
+        progress.finish();
+    }, 1000)
+    return true
 }
+
 export default function KidGirl() {
   return (
     <>
