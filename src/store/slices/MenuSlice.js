@@ -1,4 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
+
 export const menuSlice = createSlice({
   name: "menu",
   initialState: {
@@ -7,11 +8,15 @@ export const menuSlice = createSlice({
       { id: 1002, name: "دسته بندی", path: "/category" },
       { id: 1003, name: "پرو آنلاین", path: "#" },
       { id: 1004, name: "درباره ما", path: "/about-us" },
-      { id: 1005, name: "تماس با ما ", path: "/call-us" },
-      { id: 1006, name: "راهنمای استفاده ", path: "/guide" },
+      { id: 1005, name: "تماس با ما", path: "/call-us" },
+      { id: 1006, name: "راهنمای استفاده", path: "/guide" },
     ],
   },
   reducers: {},
 });
-export const menus = (state) => state.menu.menus;
+
+// Selector
+export const selectMenus = (state) => state.menu.menus;
+
+// Reducer
 export default menuSlice.reducer;
