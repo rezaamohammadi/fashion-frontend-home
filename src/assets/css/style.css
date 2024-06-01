@@ -13717,6 +13717,387 @@ height: 90%;
   justify-content: space-between;
   margin-top: 5%;
 }
+#wizard-main{
+    padding: 80px 60px 80px 60px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+#wizard-main .wizard-section{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+    gap: 70px;
+    width: min(1118px , 77.1213%);
+    height: 588px;
+}
+#wizard-main .wizard-section .right-wizard{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    gap: 30px;
+    width: calc(100% - 194px);
+    height: 100%;
+}
+#wizard-main .wizard-section .right-wizard .top-right-wizard{
+    width: 100%;
+    height: 44px;
+}
+#wizard-main .wizard-section .right-wizard .top-right-wizard ul{
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    height: 44px;
+}
+#wizard-main .wizard-section .right-wizard .top-right-wizard ul li{
+    width: 100%;
+    height: 44px;
+    text-align: center;
+}
+#wizard-main .wizard-section .right-wizard .top-right-wizard ul li span{
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-bottom: 1px solid #E0E0E6;
+    border-top: 1px solid #E0E0E6;
+    border-right: 1px solid #E0E0E6;
+    font-size: 14px;
+    font-weight: 800;
+}
+#wizard-main .wizard-section .right-wizard .top-right-wizard ul li:first-of-type span{
+    background-color: black;
+    color: white;
+}
+#wizard-main .wizard-section .right-wizard .top-right-wizard ul li:last-of-type span{
+    border-left: 1px solid #E0E0E6;
+}
+#wizard-main .wizard-section .wizard-guide{
+    width: 124px !important;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+#wizard-main .wizard-section .wizard-detail-guide > div:nth-child(1){
+    background-color: white !important;
+}
+#wizard-main .wizard-section .wizard-detail-guide > div:nth-child(1) > span{
+    color: black!important;
+}
+#wizard-main .wizard-section .wizard-detail-guide > div:nth-child(2){
+    background-color: rgb(0, 0, 0) !important;
+}
+#wizard-main .wizard-section .wizard-detail-guide > div:nth-child(2) > span{
+    color: rgb(255, 255, 255)!important;
+}
+#wizard-main .wizard-section .right-wizard .bottom-right-wizard{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    gap: 30px;
+}
+#wizard-main .wizard-section .right-wizard .right-detail, #wizard-main .wizard-section .right-section{
+    height: auto;
+}
+#wizard-main .wizard-section .right-wizard .bottom-right-wizard .add-picture, #wizard-main .wizard-section .right-wizard .bottom-right-wizard .wizard-details{
+    width: 100%;
+    height: 439px;
+    width: 100%;
+    height: 439px;
+    display: flex;
+    border: dashed 3px black;
+    padding: 20px 20px 20px 20px;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    flex-direction: column;
+}
+#wizard-main .wizard-section .right-wizard .bottom-right-wizard .more-detail{
+    height: auto;
+}
+#wizard-main .wizard-section .right-wizard .bottom-right-wizard .wizard-details{
+    gap: 20px;
+}
+#wizard-main .wizard-section .right-wizard .bottom-right-wizard .add-picture-btn{
+    width: 100%;
+    height: 45px;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+}
+#wizard-main .wizard-section .right-wizard .bottom-right-wizard .add-picture-btn .right-btns button, #wizard-main .wizard-section .right-wizard .bottom-right-wizard .add-picture-btn .left-btns button{
+    background-color:rgb(0, 0, 0);
+    height: 45px;
+    width: 110px;
+    padding: 4px 15px 4px 15px ;
+    border: 1px solid black;
+}
+#wizard-main .wizard-section .right-wizard .bottom-right-wizard .add-picture-btn .right-btns{
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 10px;
+}
+#wizard-main .wizard-section .right-wizard .bottom-right-wizard .add-picture-btn .right-btns button a, #wizard-main .wizard-section .right-wizard .bottom-right-wizard .add-picture-btn .left-btns button a{
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: 400;
+}
+#wizard-main .wizard-section .right-wizard .bottom-right-wizard .add-picture-btn .right-btns button:first-of-type{
+    background-color: white;
+}
+#wizard-main .wizard-section .right-wizard .bottom-right-wizard .add-picture-btn .right-btns button:first-of-type a, #wizard-main .wizard-section .right-wizard .bottom-right-wizard .add-picture-btn .right-btns .next-btn a{
+    color: black!important;
+}
+#wizard-main .wizard-section .right-wizard .bottom-right-wizard .add-picture-btn .right-btns button:last-of-type a, #wizard-main .wizard-section .right-wizard .bottom-right-wizard .add-picture-btn .left-btns button a{
+    color: white ;
+}
+#wizard-main .wizard-section .wizard-guide .wizard-step{
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    height: 124px;
+    padding: 36px 12px 36px 12px;
+    border: 1px solid #E0E0E6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#wizard-main .wizard-section .wizard-guide .wizard-step:first-child{
+    background-color: black;
+}
+#wizard-main .wizard-section .wizard-guide .wizard-step:first-child span{
+    color: white;
+}
+#wizard-main .wizard-section .wizard-guide .wizard-step span{
+    text-align: center;
+    font-size: 15px;
+    font-weight: 800;
+}
+#wizard-main .wizard-section .right-wizard .bottom-right-wizard .add-picture i{
+    color: black !important;
+    font-size: 100px;
+}
+#wizard-main .wizard-section .right-wizard .bottom-right-wizard .add-picture > label{
+    font-size: 20px;
+    font-weight: 700;
+    font-weight: bold;
+    text-align: center;
+}
+#wizard-main .wizard-section .right-wizard .bottom-right-wizard .wizard-details .wizard-price input[type=range]{
+    width: 290px;
+    accent-color: black;
+}
+#wizard-main .wizard-section .right-wizard .bottom-right-wizard .wizard-details .wizard-price{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    gap: 10px;
+    padding: 0px 10px 0px 10px;
+    width: 100%;
+}
+#wizard-main .wizard-section .right-wizard .bottom-right-wizard .wizard-details .wizard-price span:first-of-type, #wizard-main .wizard-section .right-wizard .bottom-right-wizard .wizard-details .wizard-detail > span{
+    font-size: 18px;
+    font-weight: 400;
+}
+#wizard-main .wizard-section .right-wizard .bottom-right-wizard .wizard-details .wizard-price span:last-of-type{
+    font-size: 14px;
+    font-weight: 400;
+}
+#wizard-main .wizard-section .right-wizard .bottom-right-wizard .wizard-details .wizard-detail{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items:start;
+    justify-content: center;
+    gap: 10px;
+    padding: 0px 10px 0px 10px;
+}
+#wizard-main .wizard-section .right-wizard .bottom-right-wizard .wizard-details .wizard-detail .each-item{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    row-gap: 10px;
+}
+#wizard-main .wizard-section .right-wizard .bottom-right-wizard .wizard-details .wizard-detail .each-item > div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 0px 10px 0px 10px;
+}
+#wizard-main .wizard-section .right-wizard .bottom-right-wizard .wizard-details .wizard-detail .each-item > div > span{
+    font-weight: 400;
+    font-size: 16px;
+}
+#wizard-main .wizard-section .right-wizard .bottom-right-wizard .wizard-details .wizard-detail .each-item > div > input[type=radio]{
+    accent-color: black;
+}
+#wizard-seggestion{
+    padding: 80px 60px 80px 60px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+#wizard-seggestion .wizard-seggestion-section{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+    gap: 70px;
+    width: min(1118px , 100%);
+    height: auto;
+}
+#wizard-seggestion .wizard-seggestion-section .right-wizard-seggestion{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    gap: 30px;
+    width: calc(100% - 194px);
+    height: auto;
+}
+#wizard-seggestion .wizard-seggestion-section .right-wizard-seggestion .top-wizard-seggestion{
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+    justify-content: center;
+    gap: 32px;
+    width: 100%;
+}
+#wizard-seggestion .wizard-seggestion-section .right-wizard-seggestion .top-wizard-seggestion .wizard-product{
+    width: 32%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: #E0E0E6 1px solid;
+}
+#wizard-seggestion .wizard-seggestion-section .wizard-guide{
+    width: 124px !important;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+#wizard-seggestion .wizard-seggestion-section .wizard-guide .wizard-step{
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    height: 124px;
+    padding: 36px 12px 36px 12px;
+    border: 1px solid #E0E0E6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#wizard-seggestion .wizard-seggestion-section .wizard-guide .wizard-step span{
+    text-align: center;
+    font-size: 15px;
+    font-weight: 800;
+}
+#wizard-seggestion .wizard-seggestion-section .wizard-guide .wizard-step:last-child span{
+    color: white;
+}
+#wizard-seggestion .wizard-seggestion-section .wizard-guide .wizard-step:last-child{
+    background-color: black;
+}
+#wizard-seggestion .wizard-seggestion-section .right-wizard-seggestion .top-wizard-seggestion .wizard-product .wizard-product-details{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    width: 100%;
+    height: 188px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+#wizard-seggestion .wizard-seggestion-section .right-wizard-seggestion .top-wizard-seggestion .wizard-product .wizard-product-details > button{
+    background-color: black;
+    border: none;
+    padding: 0px 24px 0px 24px;
+    height: 40px !important;
+}
+#wizard-seggestion .wizard-seggestion-section .right-wizard-seggestion .top-wizard-seggestion .wizard-product .wizard-product-details > div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 0px 12px 0px 12px;
+    height: 22px;
+}
+#wizard-seggestion .wizard-seggestion-section .right-wizard-seggestion .top-wizard-seggestion .wizard-product .wizard-product-details > div > div > span{
+    font-size: 12px;
+    font-weight: 800;
+}
+#wizard-seggestion .wizard-seggestion-section .right-wizard-seggestion .top-wizard-seggestion .wizard-product .wizard-product-details > button a{
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+}
+#wizard-seggestion .wizard-seggestion-section .right-wizard-seggestion .top-wizard-seggestion .wizard-product .wizard-product-details > span:first-of-type{
+    color: #474747;
+    font-size: 16px;
+    font-weight: 800;
+}
+#wizard-seggestion .wizard-seggestion-section .right-wizard-seggestion .top-wizard-seggestion .wizard-product .wizard-product-details > div > span{
+    color: #A5A5A5;
+    font-size: 13px;
+    font-weight: 800;
+}
+#wizard-seggestion .wizard-seggestion-section .right-wizard-seggestion .top-wizard-seggestion .wizard-product .wizard-product-details > span:last-of-type{
+    color: #454545;
+    font-size: 21px;
+    font-weight: 500;
+    height: 26px;
+    display: flex;
+    align-items: center;
+} 
+#wizard-seggestion .wizard-seggestion-section .right-wizard-seggestion .top-wizard-seggestion .wizard-product > img{
+    object-fit: cover;
+    object-position: top;
+}
+#wizard-seggestion .wizard-seggestion-section .right-wizard-seggestion .bottom-wizard-seggestion{
+    width: 100%;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#wizard-seggestion .wizard-seggestion-section .right-wizard-seggestion .bottom-wizard-seggestion button{
+    background-color: white;
+    border: black 1px solid;
+    width: 206px;
+    height: 45px;
+}
+#wizard-seggestion .wizard-seggestion-section .right-wizard-seggestion .bottom-wizard-seggestion button a{
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+    font-weight: 400;
+}
 @media screen and (max-width: 992px) {
   h1 {
     font-size: 24px;
@@ -16492,6 +16873,75 @@ height: 90%;
   #compair .details .d1 {
     height: auto;
   }
+  #wizard-main{
+    padding: 80px 40px 80px 40px;
+}
+#wizard-main .wizard-section{
+    flex-direction: column;
+    height: auto;
+    width: 100%;
+    flex-direction: column-reverse;
+}
+#wizard-main .wizard-section .wizard-guide{
+    flex-direction: row;
+    width: 100% !important;
+}
+#wizard-main .wizard-section .wizard-guide .wizard-step{
+    width: 124px;
+}
+#wizard-main .wizard-section .right-wizard{
+    width: 90%;
+}
+#wizard-seggestion{
+    padding: 80px 40px 80px 40px;
+}
+#wizard-seggestion .wizard-seggestion-section{
+    flex-direction: column-reverse;
+    height: auto;
+    width: 100%;
+    padding: 0px;
+}
+#wizard-seggestion .wizard-seggestion-section .wizard-guide{
+    flex-direction: row;
+    width: 100% !important;
+}
+#wizard-seggestion .wizard-seggestion-section .wizard-guide .wizard-step{
+    width: 124px;
+}
+#wizard-seggestion .wizard-seggestion-section .right-wizard-seggestion{
+    width: 95% !important;
+}
+#wizard-seggestion .wizard-seggestion-section .right-wizard-seggestion .top-wizard-seggestion{
+    height: auto;
+}
+#wizard-seggestion .wizard-seggestion-section .right-wizard-seggestion .top-wizard-seggestion .wizard-product .wizard-product-details > span:first-of-type{
+    font-size: 14px;
+}
+#wizard-seggestion .wizard-seggestion-section .right-wizard-seggestion .top-wizard-seggestion .wizard-product .wizard-product-details > div > span{
+    font-size: 12px;
+}
+#wizard-seggestion .wizard-seggestion-section .right-wizard-seggestion .top-wizard-seggestion .wizard-product .wizard-product-details > span:last-of-type{
+    font-size: 18px;
+}
+#wizard-seggestion .wizard-seggestion-section .right-wizard-seggestion .top-wizard-seggestion .wizard-product .wizard-product-details > button a{
+    font-size: 12px;
+}
+#wizard-seggestion .wizard-seggestion-section{
+    gap: 70px !important;
+}
+#wizard-seggestion .wizard-seggestion-section .right-wizard-seggestion .top-wizard-seggestion .wizard-product:nth-child(3){
+    display: none;
+}
+#wizard-seggestion .wizard-seggestion-section .right-wizard-seggestion .top-wizard-seggestion .wizard-product{
+    width: 270px;
+}
+#wizard-seggestion .wizard-seggestion-section{
+    gap: 10px;
+    justify-content: space-between;
+}
+#wizard-seggestion .wizard-seggestion-section .right-wizard-seggestion{
+    width: 75%;
+}
 }
 
 @media screen and (max-width: 576px) {
@@ -18672,4 +19122,54 @@ height: 90%;
   #single-product > .pro-info > .pro-rate {
     width: 100%;
   }
+  #wizard-main{
+    padding: 40px 20px 40px 20px;
+}
+#wizard-main .wizard-section{
+    gap: 30px;
+}
+#wizard-main .wizard-section .wizard-guide{
+    gap: 10px;
+}
+#wizard-main .wizard-section .right-wizard .bottom-right-wizard .add-picture > label{
+    font-size: 16px;
+}
+#wizard-main .wizard-section .right-wizard .bottom-right-wizard .add-picture i{
+    font-size: 70px;
+}
+#wizard-main .wizard-section .right-wizard .bottom-right-wizard .add-picture-btn .right-btns button, #wizard-main .wizard-section .right-wizard .bottom-right-wizard .add-picture-btn .left-btns button{
+    width: 110px;
+}
+#wizard-main .wizard-section .right-wizard .bottom-right-wizard .add-picture-btn .right-btns button a, #wizard-main .wizard-section .right-wizard .bottom-right-wizard .add-picture-btn .left-btns button a{
+    font-size: 15px;
+}
+#wizard-main .wizard-section .wizard-guide .wizard-step:first-child span{
+    font-size: 14px;
+}
+#wizard-main .wizard-section .wizard-guide .wizard-step{
+    width: 115px;
+    height: 115px;
+}
+#wizard-seggestion{
+    padding: 40px 20px 40px 20px;
+}
+#wizard-seggestion .wizard-seggestion-section{
+    gap: 30px !important;
+}
+#wizard-seggestion .wizard-seggestion-section .right-wizard-seggestion{
+    width: 90%;
+}
+#wizard-seggestion .wizard-seggestion-section .wizard-guide{
+    gap: 10px;
+}
+#wizard-seggestion .wizard-seggestion-section .wizard-guide .wizard-step{
+    width: 115px;
+    height: 115px;
+}
+#wizard-seggestion .wizard-seggestion-section .right-wizard-seggestion .top-wizard-seggestion{
+    gap: 10px;
+}
+#wizard-seggestion .wizard-seggestion-section .right-wizard-seggestion .top-wizard-seggestion .wizard-product:nth-child(2){
+    display: none;
+}
 }
