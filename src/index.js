@@ -6,7 +6,7 @@ import "./assets/css/style.css";import "../src/assets/fontawsome/css/all.css";
 import reportWebVitals from "./reportWebVitals";
 import { RouterProvider } from "react-router-dom";
 import { Provider } from "react-redux";
-import Store from "./Store";
+import Store from "./store/Store";
 import router from "./routes";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));

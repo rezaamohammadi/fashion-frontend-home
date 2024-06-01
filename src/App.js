@@ -2,27 +2,32 @@ import { Link, Outlet, useLocation } from "react-router-dom";
 import { Button, Modal } from 'antd';
 import { useState } from 'react';
 import ProgressBar from "@badrap/bar-of-progress";
+import { selectMenus } from "../../fashion-frontend-home/src/store/slices/MenuSlice";
+import { useDispatch, useSelector } from "react-redux";
 
 const progress = new ProgressBar({
-    size: 2,
-    color: "#29e",
-    className: "bar-of-progress",
-    delay: 80,
+  size: 2,
+  color: "#29e",
+  className: "bar-of-progress",
+  delay: 80,
 
 });
 
 export function loader() {
-    progress.start();
-    setTimeout(() => {
-        progress.finish();
-    }, 1000)
-    return true
+  progress.start();
+  setTimeout(() => {
+    progress.finish();
+  }, 1000)
+  return true
 }
 
 function App() {
   const location = useLocation()
   const [isModalOpen, setIsModalOpen] = useState(false);
-  
+  const themenu = useSelector(selectMenus);
+
+  console.log(themenu)
+
   const showModal = () => {
     setIsModalOpen(true);
   };
@@ -35,7 +40,7 @@ function App() {
     setIsModalOpen(false);
   };
   console.log(location.pathname)
-  
+
   return (
     <>
 
@@ -44,34 +49,34 @@ function App() {
         <div className="header">
           <div className="search">
 
-          <div className="m1">
-            <div class="hamburger-menu">
-            <input id="menu__toggle" type="checkbox" />
-            <label class="menu__btn" for="menu__toggle">
-              <span></span>
-          </label>
+            <div className="m1">
+              <div class="hamburger-menu">
+                <input id="menu__toggle" type="checkbox" />
+                <label class="menu__btn" for="menu__toggle">
+                  <span></span>
+                </label>
 
-          <ul class="menu__box">  
-                <li>
-                  <Link  to={"/home-page"}> صفحه اصلی</Link>
-                </li>
-                <li>
-                  <Link to={"/category"}> دسته بندی</Link>
-                </li>
-                <li>
-                  <Link to={"#"}> پرو آنلاین</Link>
-                </li>
-             
-                <li>
-                  <Link to={"/about-us"}> درباره ما</Link>
-                </li>
-                <li>
-                  <Link to={"/call-us"}>تماس با ما </Link>
-                </li>
-                <li>
-                  <Link to={"/guide"}>راهنمای استفاده </Link>
-                </li>
-              </ul>
+                {/* <ul class="menu__box">
+                  <li>
+                    <Link to={"/home-page"}> صفحه اصلی</Link>
+                  </li>
+                  <li>
+                    <Link to={"/category"}> دسته بندی</Link>
+                  </li>
+                  <li>
+                    <Link to={"#"}> پرو آنلاین</Link>
+                  </li>
+
+                  <li>
+                    <Link to={"/about-us"}> درباره ما</Link>
+                  </li>
+                  <li>
+                    <Link to={"/call-us"}>تماس با ما </Link>
+                  </li>
+                  <li>
+                    <Link to={"/guide"}>راهنمای استفاده </Link>
+                  </li>
+                </ul> */}
               </div>
             </div>
             <div className="s1">
@@ -88,6 +93,14 @@ function App() {
             <span></span>
             <div className="menu">
               <ul>
+                {themenu.map((menu) => (
+                  <li key={menu.id}>
+                    <a href={menu.path}>{menu.name}</a>
+                  </li>                                                                                                                                                                                                                                                                                                                                                                                
+                ))}
+              </ul>
+
+              {/* <ul>
                 <li>
                   <Link to={"/home-page"}> صفحه اصلی</Link>
                 </li>
@@ -95,9 +108,9 @@ function App() {
                   <Link to={"/category"}> دسته بندی</Link>
                 </li>
                 <li>
-                <Link to={"#"}> پرو آنلاین</Link>
+                  <Link to={"#"}> پرو آنلاین</Link>
                 </li>
-             
+
                 <li>
                   <Link to={"/about-us"}> درباره ما</Link>
                 </li>
@@ -107,9 +120,9 @@ function App() {
                 <li>
                   <Link to={"/guide"}>راهنمای استفاده </Link>
                 </li>
-              </ul>
+              </ul> */}
             </div>
-   
+
           </div>
 
           <div className="login">
@@ -119,112 +132,112 @@ function App() {
               </a>
               <div className="shop">
 
-<Modal title="Basic Modal" open={isModalOpen} onOk={handleOk} onCancel={handleCancel}>
+                <Modal title="Basic Modal" open={isModalOpen} onOk={handleOk} onCancel={handleCancel}>
 
 
 
 
-<div id="myDropdown" className="dropdown-content">
-                <div className="cart">
-                  <div className="item">
-                    <div className="pic">
-                      <img src={require("./assets/img/women-img (10).png")} alt="" />
-                    </div>
-                    <div className="info">
-                      <div className="icon">
-                        <i class="fa-solid fa-trash-can"></i>
-                      </div>
-                      <a href="#">
-                        <p>شلوار جین مردانه مدل مام فیت</p>
-                      </a>
-                      <div className="size-color">
-                        <div className="size">
-                          <h6>سایز: 2XL</h6>
+                  <div id="myDropdown" className="dropdown-content">
+                    <div className="cart">
+                      <div className="item">
+                        <div className="pic">
+                          <img src={require("./assets/img/women-img (10).png")} alt="" />
                         </div>
-                        <div className="color">
-                          <h6>رنگ: </h6><span></span>
+                        <div className="info">
+                          <div className="icon">
+                            <i class="fa-solid fa-trash-can"></i>
+                          </div>
+                          <a href="#">
+                            <p>شلوار جین مردانه مدل مام فیت</p>
+                          </a>
+                          <div className="size-color">
+                            <div className="size">
+                              <h6>سایز: 2XL</h6>
+                            </div>
+                            <div className="color">
+                              <h6>رنگ: </h6><span></span>
+                            </div>
+                          </div>
+                          <h5>450,000 تومان</h5>
                         </div>
                       </div>
-                      <h5>450,000 تومان</h5>
+                      <div className="item">
+                        <div className="pic">
+                          <img src={require("./assets/img/women-short.png")} alt="" />
+
+                        </div>
+                        <div className="info">
+                          <div className="icon">
+                            <i class="fa-solid fa-trash-can"></i>
+                          </div>
+                          <a href="#">
+                            <p>شلوار جین مردانه مدل مام فیت</p>
+                          </a>
+                          <div className="size-color">
+                            <div className="size">
+                              <h6>سایز: 2XL</h6>
+                            </div>
+                            <div className="color">
+                              <h6>رنگ: </h6><span></span>
+                            </div>
+                          </div>
+                          <h5>450,000 تومان</h5>
+                        </div>
+                      </div>
+                      <div className="item">
+                        <div className="pic">
+                          <img src={require("./assets/img/women-pants.png")} alt="" />
+
+                        </div>
+                        <div className="info">
+                          <div className="icon">
+                            <i class="fa-solid fa-trash-can"></i>
+                          </div>
+                          <a href="#">
+                            <p>شلوار جین مردانه مدل مام فیت</p>
+                          </a>
+                          <div className="size-color">
+                            <div className="size">
+                              <h6>سایز: 2XL</h6>
+                            </div>
+                            <div className="color">
+                              <h6>رنگ: </h6><span></span>
+                            </div>
+                          </div>
+                          <h5>450,000 تومان</h5>
+                        </div>
+                      </div>
+                      <h6>مبلغ قابل پرداخت:  <span>1,350,000 </span> تومان</h6>
+                      <div className="button">
+                        <Link className="black-btn" to={"/cart-page"} >مشاهده سبد خرید</Link>
+
+                        <Link className="white-btn" to={"/complete-purchase"} >تسویه حساب</Link>
+
+
+                      </div>
                     </div>
                   </div>
-                  <div className="item">
-                    <div className="pic">
-                      <img src={require("./assets/img/women-short.png")} alt="" />
-
-                    </div>
-                    <div className="info">
-                      <div className="icon">
-                        <i class="fa-solid fa-trash-can"></i>
-                      </div>
-                      <a href="#">
-                        <p>شلوار جین مردانه مدل مام فیت</p>
-                      </a>
-                      <div className="size-color">
-                        <div className="size">
-                          <h6>سایز: 2XL</h6>
-                        </div>
-                        <div className="color">
-                          <h6>رنگ: </h6><span></span>
-                        </div>
-                      </div>
-                      <h5>450,000 تومان</h5>
-                    </div>
-                  </div>
-                  <div className="item">
-                    <div className="pic">
-                      <img src={require("./assets/img/women-pants.png")} alt="" />
-
-                    </div>
-                    <div className="info">
-                      <div className="icon">
-                        <i class="fa-solid fa-trash-can"></i>
-                      </div>
-                      <a href="#">
-                        <p>شلوار جین مردانه مدل مام فیت</p>
-                      </a>
-                      <div className="size-color">
-                        <div className="size">
-                          <h6>سایز: 2XL</h6>
-                        </div>
-                        <div className="color">
-                          <h6>رنگ: </h6><span></span>
-                        </div>
-                      </div>
-                      <h5>450,000 تومان</h5>
-                    </div>
-                  </div>
-                  <h6>مبلغ قابل پرداخت:  <span>1,350,000 </span> تومان</h6>
-                  <div className="button">
-                    <Link className="black-btn" to={"/cart-page"} >مشاهده سبد خرید</Link>
-
-                    <Link className="white-btn" to={"/complete-purchase"} >تسویه حساب</Link>
 
 
-                  </div>
-                </div>
+
+
+
+                </Modal>
+
+
+
+                <Button type="primary" onClick={showModal}>
+                  <i
+                    onclick="myFunction()"
+                    className="fa-sharp fa-light fa-bag-shopping fa-xl dropbtn"
+                  >
+                  </i>
+                </Button>
+
+
               </div>
-
-
-
-
-
-</Modal>
-
-
-
-<Button type="primary" onClick={showModal}>
-  <i
-    onclick="myFunction()"
-    className="fa-sharp fa-light fa-bag-shopping fa-xl dropbtn"
-  >
-  </i>
-</Button>
-
-
-</div>
               <Link className="entry" to={"/email-number"}>  وارد شوید </Link>
-            
+
             </div>
           </div>
         </div>
