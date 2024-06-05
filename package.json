@@ -27,6 +27,7 @@
     "react-scripts": "5.0.1",
     "react-top-loading-bar": "^2.3.1",
     "react-transition-group": "^4.4.5",
+    "react-use-wizard": "^2.3.0",
     "redux": "^5.0.1",
     "rsuite": "^5.59.0",
     "swiper": "^11.0.5",

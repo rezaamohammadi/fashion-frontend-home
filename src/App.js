@@ -2,7 +2,7 @@ import { Link, Outlet, useLocation } from "react-router-dom";
 import { Button, Modal } from 'antd';
 import { useState } from 'react';
 import ProgressBar from "@badrap/bar-of-progress";
-import { selectMenus } from "../../fashion-frontend-home/src/store/slices/MenuSlice";
+import { selectMenus } from "../src/store/slices/MenuSlice";
 import { useDispatch, useSelector } from "react-redux";
 
 const progress = new ProgressBar({

@@ -272,104 +272,47 @@ export default function HomePage() {
           </div>
         </Swiper>
       </div>
-      <div id="upload-sec">
-        <div className="title">
-          <h2>با آپلود عکس موردنظر خود شروع کنید</h2>
+      <div id="wizard-main">
+            <div class="wizard-section">
+                <div class="right-wizard">
+                    <div class="top-right-wizard">
+                        <ul>
+                            <li><span>مردانه</span></li>
+                            <li><span>زنانه</span></li>
+                            <li><span>بچگانه</span></li>
+                        </ul>
+                    </div>
+                    <div class="bottom-right-wizard">
+                        <div class="add-picture">
+                          <i class="fa-regular fa-image"></i>
+                          <input type="file" hidden id="add-photo"/>
+                          <label for="add-photo">تصویر کلاه خود را آپلود کنید</label>
+                        </div>
+                        <div class="add-picture-btn">
+                            <div class="right-btns">
+                              <button>
+                                <a href="wizard2.html">بعدی</a>
+                              </button>
+                              <button><a href="wizard2.html">رد کردن</a></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="wizard-guide">
+                    <div class="wizard-step">
+                        <span>۱.عکست رو
+                            آپلود کن</span>
+                    </div>
+                    <div class="wizard-step">
+                        <span>۲. دسته بندی رو انتخاب کن</span>
+                    </div>
+                    <div class="wizard-step">
+                        <span>۳.پیشنهادهای 
+                            من رو ببین</span>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div className="main">
-          <div className="upload">
-            <div className="cath">
-              <a href="#">مردانه </a>
-              <span></span>
-              <a href="#"> زنانه</a>
-              <span></span>
-              <a href="#"> بچگانه</a>
-            </div>
-            <div className="items">
-              <div className="item">
-                {" "}
-                <label htmlFor="upload">
-                  {" "}
-                  <i className="fa-sharp fa-light fa-arrow-up-from-bracket fa-2xl"></i>
-                  <h5>پیراهن</h5>
-                </label>
-                <input type="file" hidden={true} id="upload" />
-              </div>
-              <div className="item">
-                {" "}
-                <label htmlFor="upload">
-                  {" "}
-                  <i className="fa-sharp fa-light fa-arrow-up-from-bracket fa-2xl"></i>
-                  <h5>شلوار</h5>
-                </label>
-                <input type="file" hidden={true} id="upload" />
-              </div>
-            </div>
-            <div className="items">
-              <div className="item">
-                {" "}
-                <label htmlFor="upload">
-                  {" "}
-                  <i className="fa-sharp fa-light fa-arrow-up-from-bracket fa-2xl"></i>
-                  <h5>کفش</h5>
-                </label>
-                <input type="file" hidden={true} id="upload" />
-              </div>
-              <div className="item">
-                {" "}
-                <label htmlFor="upload">
-                  {" "}
-                  <i className="fa-sharp fa-light fa-arrow-up-from-bracket fa-2xl"></i>
-                  <h5>کلاه</h5>
-                </label>
-                <input type="file" hidden={true} id="upload" />
-              </div>
-            </div>
-
-            <div className="view">
-              <div className="item">
-                {" "}
-                <label htmlFor="upload">
-                  {" "}
-                  <i className="fa-sharp fa-light fa-arrow-up-from-bracket fa-2xl"></i>
-                  <h5>عکس کلی</h5>
-                </label>
-                <input type="file" hidden={true} id="upload" />
-              </div>
-            </div>
-            <input type="button" className="done" value="ارسال" />
-          </div>
-          <div className="left-main">
-            <div className="text">
-              <h3>من که هستم و چه میکنم؟</h3>
-              <p>
-                سلاااام من ویرا هستم یک ربات هوشمند که توسط یک تیم جوان و نخبه
-                ساخته شدم. وظیفه من اینه که شما رو برای انتخاب لباس ست راهنمایی
-                کنم. در واقع من برنامه ریزی شدم تا با دریافت اطلاعاتی مثل عکس از
-                کاربرم اون رو در راه رسیدن به یک انتخاب مناسب راهنمایی کنم. حالا
-                من چه طوری کار میکنم؟ من یک بخش آپلود تصویر براتون قرار دادم.
-                میتونید یک عکس رو که مدنظر دارید آپلود کنید مثلا تیشرت , من برات
-                با استفاده از اون تیشرت لباس های دیگه ای که بهش میاد رو برات
-                آماده میکنم.
-              </p>
-            </div>
-            <div className="guide">
-              <div className="square">
-                <h5>۱.عکست رو آپلود کن</h5>
-              </div>
-              <div className="square">
-                <h5>۲.دکمه ارسال رو بزن</h5>
-              </div>
-              <div className="square">
-                <h5>۳.پیشنهاد های من رو ببین</h5>
-              </div>
-              <div className="square">
-                <h5>۴.دکمه خرید رو بزن</h5>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
       <div id="pro-preview">
         <div className="products-section">
           <div className="head">
