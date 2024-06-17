@@ -7,6 +7,15 @@ import ProductCard from "../../components/cards/ProductCard";
 import ProgressBar from "@badrap/bar-of-progress";
 import { selectMenus } from "../../store/slices/MenuSlice";
 import { useDispatch, useSelector } from "react-redux";
+import { useMultipleForm } from "usetheform";
+import Step1 from "../../components/wizard/Step1";
+import Step2 from "../../components/wizard/Step2";
+import Step3 from "../../components/wizard/Step3";
+import Step4 from "../../components/wizard/Step4";
+import WizardDetail from "../../components/wizard/WizardDetail";
+import WizardSuggestion from "../../components/wizard/WizardSuggestion";
+import * as React from 'react';
+
 
 const progress = new ProgressBar({
     size: 2,
@@ -40,6 +49,13 @@ console.log("co:",themenu)
   const handleCancel = () => {
     setIsModalOpen(false);
   };
+  const [currentPage, setPage] = useState(1);
+  const nextPage = () => setPage((prev) => ++prev);
+  const prevPage = () => setPage((prev) => --prev);
+
+  const [getWizardState, wizard] = useMultipleForm();
+  const onSubmitWizard = () => console.log(getWizardState());
+
 
   return (
     <>
@@ -261,47 +277,57 @@ console.log("co:",themenu)
           </div>
         </Swiper>
       </div>
-      <div id="wizard-main">
-            <div class="wizard-section">
-                <div class="right-wizard">
-                    <div class="top-right-wizard">
-                        <ul>
-                            <li><span>مردانه</span></li>
-                            <li><span>زنانه</span></li>
-                            <li><span>بچگانه</span></li>
-                        </ul>
-                    </div>
-                    <div class="bottom-right-wizard">
-                        <div class="add-picture">
-                          <i class="fa-regular fa-image"></i>
-                          <input type="file" hidden id="add-photo"/>
-                          <label for="add-photo">تصویر کلاه خود را آپلود کنید</label>
-                        </div>
-                        <div class="add-picture-btn">
-                            <div class="right-btns">
-                              <button>
-                                <a href="wizard2.html">بعدی</a>
-                              </button>
-                              <button><a href="wizard2.html">رد کردن</a></button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="wizard-guide">
-                    <div class="wizard-step">
-                        <span>۱.عکست رو
-                            آپلود کن</span>
-                    </div>
-                    <div class="wizard-step">
-                        <span>۲. دسته بندی رو انتخاب کن</span>
-                    </div>
-                    <div class="wizard-step">
-                        <span>۳.پیشنهادهای 
-                            من رو ببین</span>
-                    </div>
-                </div>
-            </div>
-        </div>
+ 
+
+
+
+      <div className="App">
+     {currentPage=== 1 && (
+       <Step1 {...wizard} onSubmit={nextPage} />
+     )}
+     {currentPage=== 2 && (
+       <Step2
+         {...wizard}
+         prevPage={prevPage}
+         onSubmit={nextPage}
+       />
+     )}
+     {currentPage=== 3 && (
+       <Step3
+         {...wizard}
+         prevPage={prevPage}
+         onSubmit={nextPage}
+       />
+     )}
+     {currentPage=== 4 && (
+       <Step4
+         {...wizard}
+         prevPage={prevPage}
+         onSubmit={nextPage}
+       />
+     )}
+     {currentPage=== 5 && (
+       <WizardDetail
+         {...wizard}
+         prevPage={prevPage}
+         onSubmit={nextPage}
+       />
+     )}
+     {currentPage=== 6&& (
+       <WizardSuggestion
+         {...wizard}
+         prevPage={prevPage}
+         onSubmit={onSubmitWizard}
+       />
+     )}
+   </div>
+
+
+
+
+
+
+
       <div id="pro-preview">
         <div className="products-section">
           <div className="head">
