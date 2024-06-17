@@ -5,6 +5,8 @@ import { useState } from "react";
 import { Button, Modal } from "antd";
 import ProductCard from "../../components/cards/ProductCard";
 import ProgressBar from "@badrap/bar-of-progress";
+import { selectMenus } from "../../store/slices/MenuSlice";
+import { useDispatch, useSelector } from "react-redux";
 
 const progress = new ProgressBar({
     size: 2,
@@ -25,7 +27,8 @@ export function loader() {
 
 export default function HomePage() {
   const [isModalOpen, setIsModalOpen] = useState(false);
-
+  const themenu = useSelector(selectMenus);
+console.log("co:",themenu)
   const showModal = () => {
     setIsModalOpen(true);
   };
@@ -50,27 +53,13 @@ export default function HomePage() {
                   <span></span>
                 </label>
 
-                <ul class="menu__box">
-                  <li>
-                    <Link to={"/home-page"}> صفحه اصلی</Link>
-                  </li>
-                  <li>
-                    <Link to={"/category"}> دسته بندی</Link>
-                  </li>
-                  <li>
-                    <Link to={""}> پرو آنلاین</Link>
-                  </li>
-                
-                  <li>
-                    <Link to={"/about-us"}> درباره ما</Link>
-                  </li>
-                  <li>
-                    <Link to={"/call-us"}>تماس با ما </Link>
-                  </li>
-                  <li>
-                    <Link to={"/guide"}>راهنمای استفاده </Link>
-                  </li>
-                </ul>
+                <ul>
+                {themenu.map((menu) => (
+                  <li key={menu.id}>
+                    <a href={menu.path}>{menu.name}</a>
+                  </li>                                                                                                                                                                                                                                                                                                                                                                                
+                ))}
+              </ul>
               </div>
             </div>
             <div className="s1">

@@ -1,10 +1,19 @@
 import { configureStore } from "@reduxjs/toolkit";
-import menuReducer from "./slices/MenuSlice"; // Adjust the path as necessary
+import DataManagerSlice, { wholeMenu } from "./slices/DataManagerSlice";
+import menuSlice, { setMenu } from "./slices/MenuSlice";
 
-const Store = configureStore({
+const store = configureStore({
   reducer: {
-    menu: menuReducer,
+    manager: DataManagerSlice,
+    menuhead: menuSlice,
   },
 });
 
-export default Store;
+// Initialize the store with menu data
+export const initializeMenus = () => {
+  const menus = wholeMenu(store.getState());
+  console.log("Loaded menus from state:", menus);
+  store.dispatch(setMenu(menus));
+};
+
+export default store;

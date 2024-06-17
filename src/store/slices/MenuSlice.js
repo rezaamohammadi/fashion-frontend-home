@@ -1,22 +1,36 @@
+// import { createSlice } from "@reduxjs/toolkit";
+// import { wholeMenu } from "../slices/DataManagerSlice";
+// import { useDispatch, useSelector } from "react-redux";
+
+// export const menuSlice = createSlice({
+//   name: "menuhead",
+//   initialState: {
+//      themenu : useSelector(wholeMenu)
+
+//   },
+//   reducers: {},
+// });
+
+// // Selector
+// export const selectMenus = (state) => state.menuhead.themenu;
+
+// // Reducer
+// export default menuSlice.reducer;
+
 import { createSlice } from "@reduxjs/toolkit";
 
 export const menuSlice = createSlice({
-  name: "menu",
+  name: "menuhead",
   initialState: {
-    menus: [
-      { id: 1001, name: "صفحه اصلی", path: "/home-page" },
-      { id: 1002, name: "دسته بندی", path: "/category" },
-      { id: 1003, name: "پرو آنلاین", path: "#" },
-      { id: 1004, name: "درباره ما", path: "/about-us" },
-      { id: 1005, name: "تماس با ما", path: "/call-us" },
-      { id: 1006, name: "راهنمای استفاده", path: "/guide" },
-    ],
+    themenu: [],
   },
-  reducers: {},
+  reducers: {
+    setMenu: (state, action) => {
+      state.themenu = action.payload;
+    },
+  },
 });
 
-// Selector
-export const selectMenus = (state) => state.menu.menus;
-
-// Reducer
+export const { setMenu } = menuSlice.actions;
+export const selectMenus = (state) => state.menuhead.themenu;
 export default menuSlice.reducer;

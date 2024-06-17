@@ -55,7 +55,13 @@ function App() {
                 <label class="menu__btn" for="menu__toggle">
                   <span></span>
                 </label>
-
+                <ul>
+                {themenu.map((menu) => (
+                  <li key={menu.id}>
+                    <a href={menu.path}>{menu.name}</a>
+                  </li>                                                                                                                                                                                                                                                                                                                                                                                
+                ))}
+              </ul>
                 {/* <ul class="menu__box">
                   <li>
                     <Link to={"/home-page"}> صفحه اصلی</Link>
