@@ -37,7 +37,7 @@ export function loader() {
 export default function HomePage() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const themenu = useSelector(selectMenus);
-console.log("co:",themenu)
+
   const showModal = () => {
     setIsModalOpen(true);
   };
@@ -91,27 +91,16 @@ console.log("co:",themenu)
             <span></span>
             <div className="menu">
               <ul>
-                <li>
-                  <Link to={"/home-page"}> صفحه اصلی</Link>
-                </li>
-                <li>
-                  <Link to={"/category"}> دسته بندی</Link>
-                </li>
-                <li>
-                  <Link to={""}> پرو آنلاین</Link>
-                </li>
-             
-                <li>
-                  <Link to={"/about-us"}> درباره ما</Link>
-                </li>
-                <li>
-                  <Link to={"/call-us"}>تماس با ما </Link>
-                </li>
-                <li>
-                  <Link to={"/guide"}>راهنمای استفاده </Link>
-                </li>
+                {themenu.map((menu) => (
+                  <li key={menu.id}>
+                    <a href={menu.path}>{menu.name}</a>
+                  </li>                                                                                                                                                                                                                                                                                                                                                                                
+                ))}
               </ul>
+
+          
             </div>
+
           </div>
           <div className="login">
             <div className="l1">

@@ -4,6 +4,7 @@ import { useState } from 'react';
 import ProgressBar from "@badrap/bar-of-progress";
 import { selectMenus } from "../src/store/slices/MenuSlice";
 import { useDispatch, useSelector } from "react-redux";
+import { productsss } from "./store/slices/ProductSlice";
 
 const progress = new ProgressBar({
   size: 2,
@@ -25,8 +26,8 @@ function App() {
   const location = useLocation()
   const [isModalOpen, setIsModalOpen] = useState(false);
   const themenu = useSelector(selectMenus);
-
-  console.log(themenu)
+  const productss=useSelector(productsss)
+  console.log(productss)
 
   const showModal = () => {
     setIsModalOpen(true);
@@ -39,7 +40,7 @@ function App() {
   const handleCancel = () => {
     setIsModalOpen(false);
   };
-  console.log(location.pathname)
+  
 
   return (
     <>
@@ -62,27 +63,6 @@ function App() {
                   </li>                                                                                                                                                                                                                                                                                                                                                                                
                 ))}
               </ul>
-                {/* <ul class="menu__box">
-                  <li>
-                    <Link to={"/home-page"}> صفحه اصلی</Link>
-                  </li>
-                  <li>
-                    <Link to={"/category"}> دسته بندی</Link>
-                  </li>
-                  <li>
-                    <Link to={"#"}> پرو آنلاین</Link>
-                  </li>
-
-                  <li>
-                    <Link to={"/about-us"}> درباره ما</Link>
-                  </li>
-                  <li>
-                    <Link to={"/call-us"}>تماس با ما </Link>
-                  </li>
-                  <li>
-                    <Link to={"/guide"}>راهنمای استفاده </Link>
-                  </li>
-                </ul> */}
               </div>
             </div>
             <div className="s1">
@@ -106,27 +86,7 @@ function App() {
                 ))}
               </ul>
 
-              {/* <ul>
-                <li>
-                  <Link to={"/home-page"}> صفحه اصلی</Link>
-                </li>
-                <li>
-                  <Link to={"/category"}> دسته بندی</Link>
-                </li>
-                <li>
-                  <Link to={"#"}> پرو آنلاین</Link>
-                </li>
-
-                <li>
-                  <Link to={"/about-us"}> درباره ما</Link>
-                </li>
-                <li>
-                  <Link to={"/call-us"}>تماس با ما </Link>
-                </li>
-                <li>
-                  <Link to={"/guide"}>راهنمای استفاده </Link>
-                </li>
-              </ul> */}
+          
             </div>
 
           </div>

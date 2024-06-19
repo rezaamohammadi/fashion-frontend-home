@@ -1321,6 +1321,7 @@ footer .Copyright-text-section p {
 /* Rounded sliders */
 #filter-menu > .filter-toggle > .f-tog > .switch > .slider.round {
   border-radius: 34px;
+  width: 60px;
 }
 
 #filter-menu > .filter-toggle > .f-tog > .switch > .slider.round:before {
