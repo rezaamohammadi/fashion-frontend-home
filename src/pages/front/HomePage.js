@@ -14,25 +14,23 @@ import Step3 from "../../components/wizard/Step3";
 import Step4 from "../../components/wizard/Step4";
 import WizardDetail from "../../components/wizard/WizardDetail";
 import WizardSuggestion from "../../components/wizard/WizardSuggestion";
-import * as React from 'react';
-
+import * as React from "react";
+import { productsss } from "../../store/slices/ProductSlice";
 
 const progress = new ProgressBar({
-    size: 2,
-    color: "#29e",
-    className: "bar-of-progress",
-    delay: 80,
-
+  size: 2,
+  color: "#29e",
+  className: "bar-of-progress",
+  delay: 80,
 });
 
 export function loader() {
-    progress.start();
-    setTimeout(() => {
-        progress.finish();
-    }, 1000)
-    return true
+  progress.start();
+  setTimeout(() => {
+    progress.finish();
+  }, 1000);
+  return true;
 }
-
 
 export default function HomePage() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -56,7 +54,7 @@ export default function HomePage() {
   const [getWizardState, wizard] = useMultipleForm();
   const onSubmitWizard = () => console.log(getWizardState());
 
-
+  const productss = useSelector(productsss);
   return (
     <>
       <div id="header-banner">
@@ -70,12 +68,12 @@ export default function HomePage() {
                 </label>
 
                 <ul>
-                {themenu.menus.map((menu) => (
-                  <li key={menu.id}>
-                    <a href={menu.path}>{menu.name}</a>
-                  </li>                                                                                                                                                                                                                                                                                                                                                                                
-                ))}
-              </ul>
+                  {themenu.menus.map((menu) => (
+                    <li key={menu.id}>
+                      <a href={menu.path}>{menu.name}</a>
+                    </li>
+                  ))}
+                </ul>
               </div>
             </div>
             <div className="s1">
@@ -94,13 +92,10 @@ export default function HomePage() {
                 {themenu.menus.map((menu) => (
                   <li key={menu.id}>
                     <a href={menu.path}>{menu.name}</a>
-                  </li>                                                                                                                                                                                                                                                                                                                                                                                
+                  </li>
                 ))}
               </ul>
-
-          
             </div>
-
           </div>
           <div className="login">
             <div className="l1">
@@ -115,95 +110,109 @@ export default function HomePage() {
                   onOk={handleOk}
                   onCancel={handleCancel}
                 >
-
-
-
-
-<div id="myDropdown" className="dropdown-content">
-                <div className="cart">
-                  <div className="item">
-                    <div className="pic">
-                      <img src={process.env.PUBLIC_URL+"/assets/img/women-img (10).png"} alt="" />
-                    </div>
-                    <div className="info">
-                      <div className="icon">
-                        <i class="fa-solid fa-trash-can"></i>
-                      </div>
-                      <a href="#">
-                        <p>شلوار جین مردانه مدل مام فیت</p>
-                      </a>
-                      <div className="size-color">
-                        <div className="size">
-                          <h6>سایز: 2XL</h6>
+                  <div id="myDropdown" className="dropdown-content">
+                    <div className="cart">
+                      <div className="item">
+                        <div className="pic">
+                          <img
+                            src={
+                              process.env.PUBLIC_URL +
+                              "/assets/img/women-img (10).png"
+                            }
+                            alt=""
+                          />
                         </div>
-                        <div className="color">
-                          <h6>رنگ: </h6><span></span>
+                        <div className="info">
+                          <div className="icon">
+                            <i class="fa-solid fa-trash-can"></i>
+                          </div>
+                          <a href="#">
+                            <p>شلوار جین مردانه مدل مام فیت</p>
+                          </a>
+                          <div className="size-color">
+                            <div className="size">
+                              <h6>سایز: 2XL</h6>
+                            </div>
+                            <div className="color">
+                              <h6>رنگ: </h6>
+                              <span></span>
+                            </div>
+                          </div>
+                          <h5>450,000 تومان</h5>
                         </div>
                       </div>
-                      <h5>450,000 تومان</h5>
+                      <div className="item">
+                        <div className="pic">
+                          <img
+                            src={
+                              process.env.PUBLIC_URL +
+                              "/assets/img/women-short.png"
+                            }
+                            alt=""
+                          />
+                        </div>
+                        <div className="info">
+                          <div className="icon">
+                            <i class="fa-solid fa-trash-can"></i>
+                          </div>
+                          <a href="#">
+                            <p>شلوار جین مردانه مدل مام فیت</p>
+                          </a>
+                          <div className="size-color">
+                            <div className="size">
+                              <h6>سایز: 2XL</h6>
+                            </div>
+                            <div className="color">
+                              <h6>رنگ: </h6>
+                              <span></span>
+                            </div>
+                          </div>
+                          <h5>450,000 تومان</h5>
+                        </div>
+                      </div>
+                      <div className="item">
+                        <div className="pic">
+                          <img
+                            src={
+                              process.env.PUBLIC_URL +
+                              "/assets/img/women-pants.png"
+                            }
+                            alt=""
+                          />
+                        </div>
+                        <div className="info">
+                          <div className="icon">
+                            <i class="fa-solid fa-trash-can"></i>
+                          </div>
+                          <a href="#">
+                            <p>شلوار جین مردانه مدل مام فیت</p>
+                          </a>
+                          <div className="size-color">
+                            <div className="size">
+                              <h6>سایز: 2XL</h6>
+                            </div>
+                            <div className="color">
+                              <h6>رنگ: </h6>
+                              <span></span>
+                            </div>
+                          </div>
+                          <h5>450,000 تومان</h5>
+                        </div>
+                      </div>
+                      <h6>
+                        مبلغ قابل پرداخت: <span>1,350,000 </span> تومان
+                      </h6>
+                      <div className="button">
+                        <Link className="black-btn" to={"/cart-page"}>
+                          مشاهده سبد خرید
+                        </Link>
+
+                        <Link className="white-btn" to={"/complete-purchase"}>
+                          تسویه حساب
+                        </Link>
+                      </div>
                     </div>
                   </div>
-                  <div className="item">
-                    <div className="pic">
-                      <img src={process.env.PUBLIC_URL+"/assets/img/women-short.png"} alt="" />
-
-                    </div>
-                    <div className="info">
-                      <div className="icon">
-                        <i class="fa-solid fa-trash-can"></i>
-                      </div>
-                      <a href="#">
-                        <p>شلوار جین مردانه مدل مام فیت</p>
-                      </a>
-                      <div className="size-color">
-                        <div className="size">
-                          <h6>سایز: 2XL</h6>
-                        </div>
-                        <div className="color">
-                          <h6>رنگ: </h6><span></span>
-                        </div>
-                      </div>
-                      <h5>450,000 تومان</h5>
-                    </div>
-                  </div>
-                  <div className="item">
-                    <div className="pic">
-                      <img src={process.env.PUBLIC_URL+"/assets/img/women-pants.png"} alt="" />
-
-                    </div>
-                    <div className="info">
-                      <div className="icon">
-                        <i class="fa-solid fa-trash-can"></i>
-                      </div>
-                      <a href="#">
-                        <p>شلوار جین مردانه مدل مام فیت</p>
-                      </a>
-                      <div className="size-color">
-                        <div className="size">
-                          <h6>سایز: 2XL</h6>
-                        </div>
-                        <div className="color">
-                          <h6>رنگ: </h6><span></span>
-                        </div>
-                      </div>
-                      <h5>450,000 تومان</h5>
-                    </div>
-                  </div>
-                  <h6>مبلغ قابل پرداخت:  <span>1,350,000 </span> تومان</h6>
-                  <div className="button">
-                    <Link className="black-btn" to={"/cart-page"} >مشاهده سبد خرید</Link>
-
-                    <Link className="white-btn" to={"/complete-purchase"} >تسویه حساب</Link>
-
-
-                  </div>
-                </div>
-              </div>
-
-
-
-
-
                 </Modal>
 
                 <Button type="primary" onClick={showModal}>
@@ -239,83 +248,68 @@ export default function HomePage() {
               {" "}
               <Link to={"/all-product"} className="banner-image-link">
                 {" "}
-                <img src={process.env.PUBLIC_URL+"/assets/img/mhead.jpg"} alt="#" />{" "}
+                <img
+                  src={process.env.PUBLIC_URL + "/assets/img/mhead.jpg"}
+                  alt="#"
+                />{" "}
               </Link>{" "}
             </SwiperSlide>{" "}
             <SwiperSlide>
               {" "}
               <Link to={"/all-product"} className="banner-image-link">
                 {" "}
-                <img src={process.env.PUBLIC_URL+"/assets/img/mhead2.jpg"} alt="#" />{" "}
+                <img
+                  src={process.env.PUBLIC_URL + "/assets/img/mhead2.jpg"}
+                  alt="#"
+                />{" "}
               </Link>{" "}
             </SwiperSlide>{" "}
             <SwiperSlide>
               {" "}
               <Link to={"/all-product"} className="banner-image-link">
                 {" "}
-                <img src={process.env.PUBLIC_URL+"/assets/img/mhead3.jpg"} alt="#" />{" "}
+                <img
+                  src={process.env.PUBLIC_URL + "/assets/img/mhead3.jpg"}
+                  alt="#"
+                />{" "}
               </Link>{" "}
             </SwiperSlide>{" "}
             <SwiperSlide>
               {" "}
               <Link to={"/all-product"} className="banner-image-link">
                 {" "}
-                <img src={process.env.PUBLIC_URL+"/assets/img/mhead4.jpg"} alt="#" />{" "}
+                <img
+                  src={process.env.PUBLIC_URL + "/assets/img/mhead4.jpg"}
+                  alt="#"
+                />{" "}
               </Link>{" "}
             </SwiperSlide>{" "}
           </div>
         </Swiper>
       </div>
- 
-
-
 
       <div className="App">
-     {currentPage=== 1 && (
-       <Step1 {...wizard} onSubmit={nextPage} />
-     )}
-     {currentPage=== 2 && (
-       <Step2
-         {...wizard}
-         prevPage={prevPage}
-         onSubmit={nextPage}
-       />
-     )}
-     {currentPage=== 3 && (
-       <Step3
-         {...wizard}
-         prevPage={prevPage}
-         onSubmit={nextPage}
-       />
-     )}
-     {currentPage=== 4 && (
-       <Step4
-         {...wizard}
-         prevPage={prevPage}
-         onSubmit={nextPage}
-       />
-     )}
-     {currentPage=== 5 && (
-       <WizardDetail
-         {...wizard}
-         prevPage={prevPage}
-         onSubmit={nextPage}
-       />
-     )}
-     {currentPage=== 6&& (
-       <WizardSuggestion
-         {...wizard}
-         prevPage={prevPage}
-         onSubmit={onSubmitWizard}
-       />
-     )}
-   </div>
-
-
-
-
-
-
+        {currentPage === 1 && <Step1 {...wizard} onSubmit={nextPage} />}
+        {currentPage === 2 && (
+          <Step2 {...wizard} prevPage={prevPage} onSubmit={nextPage} />
+        )}
+        {currentPage === 3 && (
+          <Step3 {...wizard} prevPage={prevPage} onSubmit={nextPage} />
+        )}
+        {currentPage === 4 && (
+          <Step4 {...wizard} prevPage={prevPage} onSubmit={nextPage} />
+        )}
+        {currentPage === 5 && (
+          <WizardDetail {...wizard} prevPage={prevPage} onSubmit={nextPage} />
+        )}
+        {currentPage === 6 && (
+          <WizardSuggestion
+            {...wizard}
+            prevPage={prevPage}
+            onSubmit={onSubmitWizard}
+          />
+        )}
+      </div>
 
       <div id="pro-preview">
         <div className="products-section">
@@ -350,9 +344,18 @@ export default function HomePage() {
             onSwiper={(swiper) => console.log(swiper)}
           >
             <div className="swiper-wrapper">
-              <SwiperSlide>
-              <ProductCard image={process.env.PUBLIC_URL+"/assets/img/suit1.png"}/>
-              </SwiperSlide>
+              {productss.products.map((pro) => (
+                <SwiperSlide>
+                  <ProductCard
+                    image={pro.image}
+                    title={pro.title}
+                    category={pro.category}
+                    price={pro.price}
+                    rate={pro.rate}
+                  />
+                </SwiperSlide>
+              ))}
+              {/*              
               <SwiperSlide>
               <ProductCard image={process.env.PUBLIC_URL+"/assets/img/suit2.png"}/>
               </SwiperSlide>
@@ -367,12 +370,15 @@ export default function HomePage() {
               </SwiperSlide>
               <SwiperSlide>
               <ProductCard image={process.env.PUBLIC_URL+"/assets/img/girl.png"}/>
-              </SwiperSlide>
+              </SwiperSlide> */}
             </div>
           </Swiper>
         </div>
         <a href="#" className="genral-picture">
-          <img src={process.env.PUBLIC_URL+"/assets/img/general-picture.png"} alt="#" />
+          <img
+            src={process.env.PUBLIC_URL + "/assets/img/general-picture.png"}
+            alt="#"
+          />
         </a>
         <div className="head-mobile">
           <div className="title">
@@ -412,7 +418,18 @@ export default function HomePage() {
             onSwiper={(swiper) => console.log(swiper)}
           >
             <div className="swiper-wrapper">
-              <SwiperSlide>
+              {productss.products.map((pro) => (
+                <SwiperSlide>
+                  <ProductCard
+                    image={pro.image}
+                    title={pro.title}
+                    category={pro.category}
+                    price={pro.price}
+                    rate={pro.rate}
+                  />
+                </SwiperSlide>
+              ))}
+              {/* <SwiperSlide>
               <ProductCard image={process.env.PUBLIC_URL+"/assets/img/suit2.png"}/>
               </SwiperSlide>
               <SwiperSlide>
@@ -429,7 +446,7 @@ export default function HomePage() {
               </SwiperSlide>
               <SwiperSlide>
               <ProductCard image={process.env.PUBLIC_URL+"/assets/img/girl.png"}/>
-              </SwiperSlide>
+              </SwiperSlide> */}
             </div>
           </Swiper>
         </div>
@@ -457,8 +474,19 @@ export default function HomePage() {
             onSwiper={(swiper) => console.log(swiper)}
           >
             <div className="swiper-wrapper">
-              <SwiperSlide>
-                <Link to={"/single-product"} className="product">
+              {productss.products.map((pro) => (
+                <SwiperSlide>
+                  <ProductCard
+                    image={pro.image}
+                    title={pro.title}
+                    category={pro.category}
+                    price={pro.price}
+                    rate={pro.rate}
+                  />
+                </SwiperSlide>
+              ))}
+              {/* <SwiperSlide> */}
+              {/* <Link to={"/single-product"} className="product">
                   <img src={process.env.PUBLIC_URL+"/assets/img/women-img32.png"} alt="" />
                   <p>ست زنانه</p>
                   <div className="rate-cath">
@@ -473,8 +501,9 @@ export default function HomePage() {
                     <p>تومان</p>
                   </div>
                   <input type="button" value="افزودن به سبد خرید" />
-                </Link>
-              </SwiperSlide>
+                </Link> */}
+
+              {/* </SwiperSlide>
               <SwiperSlide>
               <ProductCard image={process.env.PUBLIC_URL+"/assets/img/blus-girl.png"}/>
               </SwiperSlide>
@@ -489,7 +518,7 @@ export default function HomePage() {
               </SwiperSlide>
               <SwiperSlide>
               <ProductCard image={process.env.PUBLIC_URL+"/assets/img/girl.png"}/>
-              </SwiperSlide>
+              </SwiperSlide> */}
             </div>
           </Swiper>
         </div>
@@ -510,13 +539,22 @@ export default function HomePage() {
       </div>
       <div id="img-cathegory">
         <a href="#">
-          <img src={process.env.PUBLIC_URL+"/assets/img/mens-img.png"} alt="" />
+          <img
+            src={process.env.PUBLIC_URL + "/assets/img/mens-img.png"}
+            alt=""
+          />
         </a>
         <a href="#">
-          <img src={process.env.PUBLIC_URL+"/assets/img/kids-img.png"} alt="" />
+          <img
+            src={process.env.PUBLIC_URL + "/assets/img/kids-img.png"}
+            alt=""
+          />
         </a>
         <a href="#">
-          <img src={process.env.PUBLIC_URL+"/assets/img/womens-img.png"} alt="" />
+          <img
+            src={process.env.PUBLIC_URL + "/assets/img/womens-img.png"}
+            alt=""
+          />
         </a>
       </div>
       <div id="pro-carousel">
@@ -547,7 +585,18 @@ export default function HomePage() {
             onSwiper={(swiper) => console.log(swiper)}
           >
             <div className="swiper-wrapper">
-              <SwiperSlide> <ProductCard image={process.env.PUBLIC_URL+"/assets/img/3fc9d210bb93f59f8ba6e874cc14b402.png"}/>
+              {productss.products.map((pro) => (
+                <SwiperSlide>
+                  <ProductCard
+                    image={pro.image}
+                    title={pro.title}
+                    category={pro.category}
+                    price={pro.price}
+                    rate={pro.rate}
+                  />
+                </SwiperSlide>
+              ))}
+              {/* <SwiperSlide> <ProductCard image={process.env.PUBLIC_URL+"/assets/img/3fc9d210bb93f59f8ba6e874cc14b402.png"}/>
               
               </SwiperSlide>
               <SwiperSlide><ProductCard image={process.env.PUBLIC_URL+"/assets/img/294928046418399cfce47e85c7f41b6b.png"}/>
@@ -564,7 +613,7 @@ export default function HomePage() {
               </SwiperSlide>
               <SwiperSlide><ProductCard image={process.env.PUBLIC_URL+"/assets/img/girl.png"}/>
              
-              </SwiperSlide>
+              </SwiperSlide> */}
             </div>
           </Swiper>
         </div>
@@ -596,7 +645,18 @@ export default function HomePage() {
             onSwiper={(swiper) => console.log(swiper)}
           >
             <div className="swiper-wrapper">
-              <SwiperSlide><ProductCard image={process.env.PUBLIC_URL+"/assets/img/summer-style.png"}/>
+              {productss.products.map((pro) => (
+                <SwiperSlide>
+                  <ProductCard
+                    image={pro.image}
+                    title={pro.title}
+                    category={pro.category}
+                    price={pro.price}
+                    rate={pro.rate}
+                  />
+                </SwiperSlide>
+              ))}
+              {/* <SwiperSlide><ProductCard image={process.env.PUBLIC_URL+"/assets/img/summer-style.png"}/>
                
               </SwiperSlide>
               <SwiperSlide><ProductCard image={process.env.PUBLIC_URL+"/assets/img/summer-style2.png"}/>
@@ -613,7 +673,7 @@ export default function HomePage() {
               </SwiperSlide>
               <SwiperSlide><ProductCard image={process.env.PUBLIC_URL+"/assets/img/girl.png"}/>
               
-              </SwiperSlide>
+              </SwiperSlide> */}
             </div>
           </Swiper>
         </div>
