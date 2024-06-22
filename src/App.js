@@ -27,7 +27,7 @@ function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const themenu = useSelector(selectMenus);
   const productss=useSelector(productsss)
-  console.log(productss)
+  console.log(productss.products)
 
   const showModal = () => {
     setIsModalOpen(true);
@@ -57,11 +57,11 @@ function App() {
                   <span></span>
                 </label>
                 <ul>
-                {themenu.map((menu) => (
+                {themenu.menus.map((menu) => (
                   <li key={menu.id}>
                     <a href={menu.path}>{menu.name}</a>
                   </li>                                                                                                                                                                                                                                                                                                                                                                                
-                ))}
+                ))} 
               </ul>
               </div>
             </div>
@@ -79,7 +79,7 @@ function App() {
             <span></span>
             <div className="menu">
               <ul>
-                {themenu.map((menu) => (
+                {themenu.menus.map((menu) => (
                   <li key={menu.id}>
                     <a href={menu.path}>{menu.name}</a>
                   </li>                                                                                                                                                                                                                                                                                                                                                                                

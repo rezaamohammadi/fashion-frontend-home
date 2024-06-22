@@ -70,7 +70,7 @@ export default function HomePage() {
                 </label>
 
                 <ul>
-                {themenu.map((menu) => (
+                {themenu.menus.map((menu) => (
                   <li key={menu.id}>
                     <a href={menu.path}>{menu.name}</a>
                   </li>                                                                                                                                                                                                                                                                                                                                                                                
@@ -91,7 +91,7 @@ export default function HomePage() {
             <span></span>
             <div className="menu">
               <ul>
-                {themenu.map((menu) => (
+                {themenu.menus.map((menu) => (
                   <li key={menu.id}>
                     <a href={menu.path}>{menu.name}</a>
                   </li>                                                                                                                                                                                                                                                                                                                                                                                
