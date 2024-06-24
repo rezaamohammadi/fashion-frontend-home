@@ -21,7 +21,7 @@ const loadData = () => {
             image:
               "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/64b33842708a4f368668b79bcdf368af_9366/Neuclassics_T-Shirt_Schwarz_IW5603_21_model.jpg",
             title: "تیشرت زنانه",
-            price: 54,
+            price: 900,
             rate: 2,
             category: "اسپرت زنانه",
           },
@@ -29,7 +29,7 @@ const loadData = () => {
             image:
               "https://assets.adidas.com/images/w_500,h_500,f_auto,q_auto,fl_lossy,c_fill,g_auto/84d6f2916e744c798f5ffa245c9f3d8a_9366/Adicolor_Classics_Loose_Firebird_Track_Top_Black_IT7405_21_model.jpg",
             title: "تیشرت زنانه",
-            price: 54,
+            price: 900,
             rate: 2,
             category: "اسپرت زنانه",
           },
@@ -37,7 +37,7 @@ const loadData = () => {
             image:
               "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/cabfec36c86a4d1484e02ff63a9508f3_9366/Trefoil_Regular_Tee_White_IR9534_21_model.jpg",
             title: "تیشرت زنانه",
-            price: 54,
+            price: 900,
             rate: 2,
             category: "اسپرت زنانه",
           },
@@ -45,7 +45,7 @@ const loadData = () => {
             image:
               "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/64b33842708a4f368668b79bcdf368af_9366/Neuclassics_T-Shirt_Schwarz_IW5603_21_model.jpg",
             title: "تیشرت زنانه",
-            price: 54,
+            price: 900,
             rate: 2,
             category: "اسپرت زنانه",
           },
@@ -53,7 +53,7 @@ const loadData = () => {
             image:
               "https://assets.adidas.com/images/w_500,h_500,f_auto,q_auto,fl_lossy,c_fill,g_auto/84d6f2916e744c798f5ffa245c9f3d8a_9366/Adicolor_Classics_Loose_Firebird_Track_Top_Black_IT7405_21_model.jpg",
             title: "تیشرت زنانه",
-            price: 54,
+            price: 900,
             rate: 2,
             category: "اسپرت زنانه",
           },
@@ -61,7 +61,7 @@ const loadData = () => {
             image:
               "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/cabfec36c86a4d1484e02ff63a9508f3_9366/Trefoil_Regular_Tee_White_IR9534_21_model.jpg",
             title: "تیشرت زنانه",
-            price: 54,
+            price: 900,
             rate: 2,
             category: "اسپرت زنانه",
           },
@@ -69,7 +69,7 @@ const loadData = () => {
             image:
               "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/64b33842708a4f368668b79bcdf368af_9366/Neuclassics_T-Shirt_Schwarz_IW5603_21_model.jpg",
             title: "تیشرت زنانه",
-            price: 54,
+            price: 900,
             rate: 2,
             category: "اسپرت زنانه",
           },
@@ -77,7 +77,7 @@ const loadData = () => {
             image:
               "https://assets.adidas.com/images/w_500,h_500,f_auto,q_auto,fl_lossy,c_fill,g_auto/84d6f2916e744c798f5ffa245c9f3d8a_9366/Adicolor_Classics_Loose_Firebird_Track_Top_Black_IT7405_21_model.jpg",
             title: "تیشرت زنانه",
-            price: 54,
+            price: 900,
             rate: 2,
             category: "اسپرت زنانه",
           },
@@ -85,7 +85,7 @@ const loadData = () => {
             image:
               "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/cabfec36c86a4d1484e02ff63a9508f3_9366/Trefoil_Regular_Tee_White_IR9534_21_model.jpg",
             title: "تیشرت زنانه",
-            price: 54,
+            price: 900,
             rate: 2,
             category: "اسپرت زنانه",
           },
@@ -93,7 +93,7 @@ const loadData = () => {
             image:
               "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/64b33842708a4f368668b79bcdf368af_9366/Neuclassics_T-Shirt_Schwarz_IW5603_21_model.jpg",
             title: "تیشرت زنانه",
-            price: 54,
+            price: 900,
             rate: 2,
             category: "اسپرت زنانه",
           },
@@ -101,7 +101,7 @@ const loadData = () => {
             image:
               "https://assets.adidas.com/images/w_500,h_500,f_auto,q_auto,fl_lossy,c_fill,g_auto/84d6f2916e744c798f5ffa245c9f3d8a_9366/Adicolor_Classics_Loose_Firebird_Track_Top_Black_IT7405_21_model.jpg",
             title: "تیشرت زنانه",
-            price: 54,
+            price: 900,
             rate: 2,
             category: "اسپرت زنانه",
           },
@@ -109,7 +109,7 @@ const loadData = () => {
             image:
               "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/cabfec36c86a4d1484e02ff63a9508f3_9366/Trefoil_Regular_Tee_White_IR9534_21_model.jpg",
             title: "تیشرت زنانه",
-            price: 54,
+            price: 900,
             rate: 2,
             category: "اسپرت زنانه",
           },

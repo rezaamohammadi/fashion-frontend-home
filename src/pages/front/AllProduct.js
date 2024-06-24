@@ -1,24 +1,25 @@
 import { Link } from "react-router-dom";
 import ProductCard from "../../components/cards/ProductCard";
 import ProgressBar from "@badrap/bar-of-progress";
+import { productsss } from "../../store/slices/ProductSlice";
+import { useSelector } from "react-redux";
 
 const progress = new ProgressBar({
-    size: 2,
-    color: "#29e",
-    className: "bar-of-progress",
-    delay: 80,
-
+  size: 2,
+  color: "#29e",
+  className: "bar-of-progress",
+  delay: 80,
 });
 
 export function loader() {
-    progress.start();
-    setTimeout(() => {
-        progress.finish();
-    }, 1000)
-    return true
+  progress.start();
+  setTimeout(() => {
+    progress.finish();
+  }, 1000);
+  return true;
 }
-
 export default function AllProduct() {
+  const productss = useSelector(productsss);
   return (
     <>
       <div id="all-product">
@@ -177,15 +178,38 @@ export default function AllProduct() {
             <a href="#">مرتبط‌ترین</a>
           </div>
           <div className="pro-row">
-            <ProductCard image={process.env.PUBLIC_URL + "/assets/img/damnman2.png"} />
-            <ProductCard image={process.env.PUBLIC_URL + "/assets/img/damnman.png"} />
-            <ProductCard image={process.env.PUBLIC_URL + "/assets/img/975486f20655ffebd5154cf19f72e480.jpg"} />
+            {productss.products.slice(0,3).map((pro) => (
+              <ProductCard
+                image={pro.image}
+                title={pro.title}
+                category={pro.category}
+                price={pro.price}
+                rate={pro.rate}
+              />
+            ))}
           </div>
           <div className="pro-row">
-            <ProductCard image={process.env.PUBLIC_URL + "/assets/img/suit1.png"} /> <ProductCard image={process.env.PUBLIC_URL + "/assets/img/blus-girl.png"} /> <ProductCard image={process.env.PUBLIC_URL + "/assets/img/suit1.png"} />
+          {productss.products.slice(0,3).map((pro) => (
+              <ProductCard
+                image={pro.image}
+                title={pro.title}
+                category={pro.category}
+                price={pro.price}
+                rate={pro.rate}
+              />
+            ))}
+          
           </div>
           <div className="pro-row">
-            <ProductCard image={process.env.PUBLIC_URL + "/assets/img/975486f20655ffebd5154cf19f72e480.jpg"} /> <ProductCard image={process.env.PUBLIC_URL + "/assets/img/blus-boy.png"} /> <ProductCard image={process.env.PUBLIC_URL + "/assets/img/suit1.png"} />
+          {productss.products.slice(0,3).map((pro) => (
+              <ProductCard
+                image={pro.image}
+                title={pro.title}
+                category={pro.category}
+                price={pro.price}
+                rate={pro.rate}
+              />
+            ))}
           </div>
 
           <div className="pro-mobile">
