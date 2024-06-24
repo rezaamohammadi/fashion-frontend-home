@@ -2,7 +2,8 @@ import { Link } from "react-router-dom"
 import { Swiper, SwiperSlide } from 'swiper/react';
 import ProductCard from "../../components/cards/ProductCard";
 import ProgressBar from "@badrap/bar-of-progress";
-
+import { productsss } from "../../store/slices/ProductSlice";
+import { useDispatch, useSelector } from "react-redux";
 const progress = new ProgressBar({
     size: 2,
     color: "#29e",
@@ -20,6 +21,7 @@ export function loader() {
 }
 
 export default function KidBaby() {
+    const productss = useSelector(productsss);
 
     return (
 
@@ -125,24 +127,17 @@ export default function KidBaby() {
                             onSlideChange={() => console.log('slide change')}
                             onSwiper={(swiper) => console.log(swiper)}>
                             <div className="swiper-wrapper">
-                                <SwiperSlide>
-                                    <ProductCard image={process.env.PUBLIC_URL + "/assets/img/294928046418399cfce47e85c7f41b6b.png"} />
-                                </SwiperSlide>
-                                <SwiperSlide>
-                                    <ProductCard image={process.env.PUBLIC_URL + "/assets/img/carousel-baby2.png"} />
-                                </SwiperSlide>
-                                <SwiperSlide>
-                                    <ProductCard image={process.env.PUBLIC_URL + "/assets/img/0a31f8c3cf708c6ae1bfe12d3b2c7a70.png"} />
-                                </SwiperSlide>
-                                <SwiperSlide>
-                                    <ProductCard image={process.env.PUBLIC_URL + "/assets/img/3fc9d210bb93f59f8ba6e874cc14b402.png"} />
-                                </SwiperSlide>
-                                <SwiperSlide>
-                                    <ProductCard image={process.env.PUBLIC_URL + "/assets/img/blus-girl.png"} />
-                                </SwiperSlide>
-                                <SwiperSlide>
-                                    <ProductCard image={process.env.PUBLIC_URL + "/assets/img/girl.png"} />
-                                </SwiperSlide>
+                            {productss.products.map((pro) => (
+                                    <SwiperSlide>
+                                        <ProductCard
+                                            image={pro.image}
+                                            title={pro.title}
+                                            category={pro.category}
+                                            price={pro.price}
+                                            rate={pro.rate}
+                                        />
+                                    </SwiperSlide>
+                                ))}
                             </div>
                         </Swiper>
                     </div>
@@ -226,24 +221,17 @@ export default function KidBaby() {
                             onSlideChange={() => console.log('slide change')}
                             onSwiper={(swiper) => console.log(swiper)}>
                             <div className="swiper-wrapper">
-                                <SwiperSlide>
-                                    <ProductCard image={process.env.PUBLIC_URL + "/assets/img/women123.png"} />
-                                </SwiperSlide>
-                                <SwiperSlide>
-                                    <ProductCard image={process.env.PUBLIC_URL + "/assets/img/women-img (11).png"} />
-                                </SwiperSlide>
-                                <SwiperSlide>
-                                    <ProductCard image={process.env.PUBLIC_URL + "/assets/img/8ff81791eba96c1bb5d90e483f96f7ba.jpg"} />
-                                </SwiperSlide>
-                                <SwiperSlide>
-                                    <ProductCard image={process.env.PUBLIC_URL + "/assets/img/a5e698cd697088e7f637645a748df3d1.jpg"} />
-                                </SwiperSlide>
-                                <SwiperSlide>
-                                    <ProductCard image={process.env.PUBLIC_URL + "/assets/img/blus-girl.png"} />
-                                </SwiperSlide>
-                                <SwiperSlide>
-                                    <ProductCard image={process.env.PUBLIC_URL + "/assets/img/girl.png"} />
-                                </SwiperSlide>
+                            {productss.products.map((pro) => (
+                                    <SwiperSlide>
+                                        <ProductCard
+                                            image={pro.image}
+                                            title={pro.title}
+                                            category={pro.category}
+                                            price={pro.price}
+                                            rate={pro.rate}
+                                        />
+                                    </SwiperSlide>
+                                ))}
                             </div>
                         </Swiper>
                     </div>

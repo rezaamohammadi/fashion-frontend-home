@@ -5,6 +5,8 @@ import { Button, Modal } from "antd";
 import Rating from "react-rating";
 import ProductCard from "../../components/cards/ProductCard";
 import ProgressBar from "@badrap/bar-of-progress";
+import { productsss } from "../../store/slices/ProductSlice";
+import { useDispatch, useSelector } from "react-redux";
 
 const progress = new ProgressBar({
     size: 2,
@@ -34,6 +36,8 @@ export default function SingleProduct() {
   const handleCancel = () => {
     setIsModalOpen(false);
   };
+  const productss = useSelector(productsss);
+
   return (
     <>
       <div id="single-product">
@@ -156,24 +160,17 @@ export default function SingleProduct() {
             onSwiper={(swiper) => console.log(swiper)}
           >
             <div className="swiper-wrapper">
-              <SwiperSlide>
-                <ProductCard image={process.env.PUBLIC_URL + "/assets/img/women123.png"} />
-              </SwiperSlide>
-              <SwiperSlide>
-                <ProductCard image={process.env.PUBLIC_URL + "/assets/img/women-img (11).png"} />
-              </SwiperSlide>
-              <SwiperSlide>
-                <ProductCard image={process.env.PUBLIC_URL + "/assets/img/8ff81791eba96c1bb5d90e483f96f7ba.jpg"} />
-              </SwiperSlide>
-              <SwiperSlide>
-                <ProductCard image={process.env.PUBLIC_URL + "/assets/img/a5e698cd697088e7f637645a748df3d1.jpg"} />
-              </SwiperSlide>
-              <SwiperSlide>
-                <ProductCard image={process.env.PUBLIC_URL + "/assets/img/blus-girl.png"} />
-              </SwiperSlide>
-              <SwiperSlide>
-                <ProductCard image={process.env.PUBLIC_URL + "/assets/img/girl.png"} />
-              </SwiperSlide>
+            {productss.products.map((pro) => (
+                <SwiperSlide>
+                  <ProductCard
+                    image={pro.image}
+                    title={pro.title}
+                    category={pro.category}
+                    price={pro.price}
+                    rate={pro.rate}
+                  />
+                </SwiperSlide>
+              ))}
             </div>
           </Swiper>
         </div>
