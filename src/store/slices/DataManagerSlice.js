@@ -19,99 +19,123 @@ const loadData = () => {
       : [
           {
             image:
-              "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/64b33842708a4f368668b79bcdf368af_9366/Neuclassics_T-Shirt_Schwarz_IW5603_21_model.jpg",
-            title: "تیشرت زنانه",
-            price: 900,
-            rate: 2,
-            category: "اسپرت زنانه",
+              "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/d3257a613d5244e6902bf38085d37a27_9366/Tiro_Cut_3-Stripes_Crop_Jersey_Green_IZ2081_21_model.jpg",
+            title: " تیشرت زنانه",
+            price: 500,
+            rate: 4,
+            categories: ["زنانه"],
+            properties: {
+              color: "سبز",
+              size: "m",
+            },
           },
           {
             image:
-              "https://assets.adidas.com/images/w_500,h_500,f_auto,q_auto,fl_lossy,c_fill,g_auto/84d6f2916e744c798f5ffa245c9f3d8a_9366/Adicolor_Classics_Loose_Firebird_Track_Top_Black_IT7405_21_model.jpg",
-            title: "تیشرت زنانه",
-            price: 900,
+              "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/14dc7766a0224edca915f394afd1f237_9366/Adicolor_Satin_Wide_Leg_Track_Pants_Black_IU2520_21_model.jpg",
+            title: " شلوار زنانه",
+            price: 400,
             rate: 2,
-            category: "اسپرت زنانه",
+            categories: ["زنانه"],
+            properties: {
+              color: "مشکی",
+              size: "l",
+            },
           },
           {
             image:
-              "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/cabfec36c86a4d1484e02ff63a9508f3_9366/Trefoil_Regular_Tee_White_IR9534_21_model.jpg",
-            title: "تیشرت زنانه",
-            price: 900,
-            rate: 2,
-            category: "اسپرت زنانه",
+              "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/97741b87a0bb4d2688418754fcf7e6eb_9366/Trefoil_Essentials_Tee_Blue_IZ2097_21_model.jpg",
+            title: " تیشرت مردانه",
+            price: 300,
+            rate: 3,
+            categories: ["مردانه"],
+            properties: {
+              color: "سرمه ای",
+              size: "xl",
+            },
           },
           {
             image:
-              "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/64b33842708a4f368668b79bcdf368af_9366/Neuclassics_T-Shirt_Schwarz_IW5603_21_model.jpg",
-            title: "تیشرت زنانه",
-            price: 900,
-            rate: 2,
-            category: "اسپرت زنانه",
+              "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/a7d0aa56d8dc41a2afd14c175ccad8bf_9366/Designed_for_Training_Workout_Tee_Grey_IS3809_21_model.jpg",
+            title: " تیشرت مردانه",
+            price: 450,
+            rate: 4,
+            categories: ["مردانه"],
+            properties: {
+              color: "طوسی",
+              size: "xl",
+            },
           },
           {
             image:
-              "https://assets.adidas.com/images/w_500,h_500,f_auto,q_auto,fl_lossy,c_fill,g_auto/84d6f2916e744c798f5ffa245c9f3d8a_9366/Adicolor_Classics_Loose_Firebird_Track_Top_Black_IT7405_21_model.jpg",
-            title: "تیشرت زنانه",
-            price: 900,
-            rate: 2,
-            category: "اسپرت زنانه",
+              "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/9e2330020ac540eaa6fad3c3e9177cfe_9366/Adibreak_Pants_Red_IY9924_21_model.jpg",
+            title: " شلوار مردانه",
+            price: 700,
+            rate: 1,
+            categories: ["مردانه"],
+            properties: {
+              color: "قرمز",
+              size: "l",
+            },
           },
           {
             image:
-              "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/cabfec36c86a4d1484e02ff63a9508f3_9366/Trefoil_Regular_Tee_White_IR9534_21_model.jpg",
-            title: "تیشرت زنانه",
-            price: 900,
-            rate: 2,
-            category: "اسپرت زنانه",
+              "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/0caf697b1d554f998f0b38f37af6e907_9366/Trefoil_Essentials_Hoodie_Blue_IY4929_21_model.jpg",
+            title: " هودی مردانه",
+            price: 500,
+            rate: 4,
+            categories: ["مردانه"],
+            properties: {
+              color: "سرمه ای",
+              size: "2xl ",
+            },
           },
           {
             image:
-              "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/64b33842708a4f368668b79bcdf368af_9366/Neuclassics_T-Shirt_Schwarz_IW5603_21_model.jpg",
-            title: "تیشرت زنانه",
-            price: 900,
-            rate: 2,
-            category: "اسپرت زنانه",
+              "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/35697fe6d4d74f839c6ae62bfd81b673_9366/AOP_PEBBLE_CAMO_SS_TEE_Green_IR4934_21_model.jpg",
+            title: " تیشرت بچگانه",
+            price: 300,
+            rate: 3,
+            categories: ["بچگانه"],
+            properties: {
+              color: "سبز",
+              size: "s",
+            },
           },
           {
             image:
-              "https://assets.adidas.com/images/w_500,h_500,f_auto,q_auto,fl_lossy,c_fill,g_auto/84d6f2916e744c798f5ffa245c9f3d8a_9366/Adicolor_Classics_Loose_Firebird_Track_Top_Black_IT7405_21_model.jpg",
-            title: "تیشرت زنانه",
-            price: 900,
-            rate: 2,
-            category: "اسپرت زنانه",
+              "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/bacd95b14d794f00ba51c4f4e404b581_9366/adidas_Designed_for_Training_Stretch_Woven_Pants_Green_IR4853_21_model.jpg",
+            title: " شلوار بچگانه",
+            price: 300,
+            rate: 4,
+            categories: ["بچگانه"],
+            properties: {
+              color: "سبز",
+              size: "m",
+            },
           },
           {
             image:
-              "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/cabfec36c86a4d1484e02ff63a9508f3_9366/Trefoil_Regular_Tee_White_IR9534_21_model.jpg",
-            title: "تیشرت زنانه",
-            price: 900,
-            rate: 2,
-            category: "اسپرت زنانه",
+              "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/118d5b041aef4553afba9020eca07117_9366/ALL_SZN_Fleece_Loose_Hoodie_Pink_IY6765_21_model.jpg",
+            title: " هودی زنانه",
+            price: 500,
+            rate: 4,
+            categories: ["زنانه"],
+            properties: {
+              color: "صورتی",
+              size: "l",
+            },
           },
           {
             image:
-              "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/64b33842708a4f368668b79bcdf368af_9366/Neuclassics_T-Shirt_Schwarz_IW5603_21_model.jpg",
-            title: "تیشرت زنانه",
-            price: 900,
-            rate: 2,
-            category: "اسپرت زنانه",
-          },
-          {
-            image:
-              "https://assets.adidas.com/images/w_500,h_500,f_auto,q_auto,fl_lossy,c_fill,g_auto/84d6f2916e744c798f5ffa245c9f3d8a_9366/Adicolor_Classics_Loose_Firebird_Track_Top_Black_IT7405_21_model.jpg",
-            title: "تیشرت زنانه",
-            price: 900,
-            rate: 2,
-            category: "اسپرت زنانه",
-          },
-          {
-            image:
-              "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/cabfec36c86a4d1484e02ff63a9508f3_9366/Trefoil_Regular_Tee_White_IR9534_21_model.jpg",
-            title: "تیشرت زنانه",
-            price: 900,
-            rate: 2,
-            category: "اسپرت زنانه",
+              "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/c0353795b00549caba60111796b52d1a_9366/Trefoil_Essentials_Tee_White_IZ2098_21_model.jpg",
+            title: " تیشرت مردانه",
+            price: 800,
+            rate: 4,
+            categories: ["مردانه"],
+            properties: {
+              color: "سفید",
+              size: "xl",
+            },
           },
         ],
   };

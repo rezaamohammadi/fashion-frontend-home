@@ -59,7 +59,7 @@ function App() {
                 <ul>
                 {themenu.menus.map((menu) => (
                   <li key={menu.id}>
-                    <a href={menu.path}>{menu.name}</a>
+                    <Link to={menu.path}>{menu.name}</Link>
                   </li>                                                                                                                                                                                                                                                                                                                                                                                
                 ))} 
               </ul>
@@ -81,7 +81,7 @@ function App() {
               <ul>
                 {themenu.menus.map((menu) => (
                   <li key={menu.id}>
-                    <a href={menu.path}>{menu.name}</a>
+                    <Link to={menu.path}>{menu.name}</Link>
                   </li>                                                                                                                                                                                                                                                                                                                                                                                
                 ))}
               </ul>

@@ -136,7 +136,9 @@ export default function KidGirl() {
                   <ProductCard
                     image={pro.image}
                     title={pro.title}
-                    category={pro.category}
+                   category={pro.categories.map((cat)=>(
+                      cat
+                    ))}
                     price={pro.price}
                     rate={pro.rate}
                   />
@@ -232,7 +234,9 @@ export default function KidGirl() {
                   <ProductCard
                     image={pro.image}
                     title={pro.title}
-                    category={pro.category}
+                   category={pro.categories.map((cat)=>(
+                      cat
+                    ))}
                     price={pro.price}
                     rate={pro.rate}
                   />
