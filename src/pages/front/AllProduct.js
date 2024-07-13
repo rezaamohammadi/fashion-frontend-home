@@ -1,8 +1,10 @@
 import { Link } from "react-router-dom";
 import ProductCard from "../../components/cards/ProductCard";
 import ProgressBar from "@badrap/bar-of-progress";
-import { productsss } from "../../store/slices/ProductSlice";
-import { useSelector } from "react-redux";
+import { filter, productsss } from "../../store/slices/ProductSlice";
+import { useDispatch, useSelector } from "react-redux";
+import { useEffect, useState } from "react";
+import { setCategory } from "../../store/slices/DataManagerSlice";
 
 const progress = new ProgressBar({
   size: 2,
@@ -20,6 +22,15 @@ export function loader() {
 }
 export default function AllProduct() {
   const productss = useSelector(productsss);
+  const [categories, setCategories] = useState([]);
+  const dispatch=useDispatch()
+  useEffect(() => {
+    const category = productss.products.map((pro) => pro.categories);
+    const flattedcolor = category.flat();
+    const uniqueCat = Array.from(new Set(flattedcolor));
+    setCategories(uniqueCat);
+   
+  }, 0);
   return (
     <>
       <div id="all-product">
@@ -141,13 +152,12 @@ export default function AllProduct() {
               </option>{" "}
               <option>گزینه دوم</option> <option>گزینه سوم</option>{" "}
             </select>{" "}
-            <select>
+            
+            <select onChange={(e) =>  dispatch(filter(e.target.value))}>
               {" "}
-              <option selected hidden>
-                جنسیت
-              </option>{" "}
-              <option>مردانه</option> <option>زنانه</option>{" "}
-              <option>بچگانه</option>{" "}
+              {categories.map((cat) => (
+                <option value={cat}>{cat}</option>
+              ))}
             </select>
           </div>
 
@@ -178,40 +188,34 @@ export default function AllProduct() {
             <a href="#">مرتبط‌ترین</a>
           </div>
           <div className="pro-row">
-            {productss.products.slice(0,3).map((pro) => (
+         
+            {productss.products.slice(0, 3).map((pro) => (
               <ProductCard
                 image={pro.image}
                 title={pro.title}
-               category={pro.categories.map((cat)=>(
-                      cat
-                    ))}
+                category={pro.categories.map((cat) => cat)}
                 price={pro.price}
                 rate={pro.rate}
               />
             ))}
           </div>
           <div className="pro-row">
-          {productss.products.slice(0,3).map((pro) => (
+            {productss.products.slice(0, 3).map((pro) => (
               <ProductCard
                 image={pro.image}
                 title={pro.title}
-               category={pro.categories.map((cat)=>(
-                      cat
-                    ))}
+                category={pro.categories.map((cat) => cat)}
                 price={pro.price}
                 rate={pro.rate}
               />
             ))}
-          
           </div>
           <div className="pro-row">
-          {productss.products.slice(0,3).map((pro) => (
+            {productss.products.slice(0, 3).map((pro) => (
               <ProductCard
                 image={pro.image}
                 title={pro.title}
-               category={pro.categories.map((cat)=>(
-                      cat
-                    ))}
+                category={pro.categories.map((cat) => cat)}
                 price={pro.price}
                 rate={pro.rate}
               />

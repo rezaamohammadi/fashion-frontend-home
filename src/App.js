@@ -27,7 +27,7 @@ function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const themenu = useSelector(selectMenus);
   const productss=useSelector(productsss)
-  console.log(productss.products)
+ 
 
   const showModal = () => {
     setIsModalOpen(true);

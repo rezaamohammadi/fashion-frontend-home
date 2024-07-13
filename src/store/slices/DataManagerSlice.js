@@ -3,6 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 const loadData = () => {
   const savedMenus = localStorage.getItem("menus");
   const savedProducts = localStorage.getItem("products");
+
   return {
     menus: savedMenus
       ? JSON.parse(savedMenus)
@@ -161,6 +162,7 @@ export const DataManagerSlice = createSlice({
 });
 
 export const { setMenus } = DataManagerSlice.actions;
+export const { setCategory } = DataManagerSlice.actions;
 export const wholeMenu = (state) => state.manager.menus;
 export const { setproducts } = DataManagerSlice.actions;
 export const wholeProducts = (state) => state.manager.products;
